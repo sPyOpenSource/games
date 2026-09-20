@@ -1,0 +1,27 @@
+{
+  "issues": [],
+  "warnings": [
+    "Node 'config:metadata.json' has no edges (orphan)",
+    "Node 'file:.understand-anything/.understandignore' has no edges (orphan)"
+  ],
+  "stats": {
+    "totalNodes": 41,
+    "totalEdges": 78,
+    "totalLayers": 7,
+    "tourSteps": 11,
+    "nodeTypes": {
+      "file": 19,
+      "function": 17,
+      "config": 5
+    },
+    "edgeTypes": {
+      "imports": 30,
+      "contains": 17,
+      "exports": 17,
+      "calls": 7,
+      "depends_on": 2,
+      "configures": 4,
+      "deploys": 1
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "projectRoot": "/Users/xuyi/Source/JavaScript/games",
+  "batchFiles": [
+    {"path": "src/components/GameViewer.tsx", "language": "typescript", "sizeLines": 282, "fileCategory": "code"},
+    {"path": "src/components/games/BreakoutGame.tsx", "language": "typescript", "sizeLines": 766, "fileCategory": "code"},
+    {"path": "src/components/games/FlappyGame.tsx", "language": "typescript", "sizeLines": 479, "fileCategory": "code"},
+    {"path": "src/components/games/Game2048.tsx", "language": "typescript", "sizeLines": 476, "fileCategory": "code"},
+    {"path": "src/components/games/MinesweeperGame.tsx", "language": "typescript", "sizeLines": 436, "fileCategory": "code"},
+    {"path": "src/components/games/SimonGame.tsx", "language": "typescript", "sizeLines": 272, "fileCategory": "code"},
+    {"path": "src/components/games/SnakeGame.tsx", "language": "typescript", "sizeLines": 589, "fileCategory": "code"},
+    {"path": "src/utils/audio.ts", "language": "typescript", "sizeLines": 207, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "src/components/GameViewer.tsx": [
+      "src/components/games/BreakoutGame.tsx",
+      "src/components/games/FlappyGame.tsx",
+      "src/components/games/Game2048.tsx",
+      "src/components/games/MinesweeperGame.tsx",
+      "src/components/games/SimonGame.tsx",
+      "src/components/games/SnakeGame.tsx",
+      "src/data/gamesData.ts",
+      "src/types.ts"
+    ],
+    "src/components/games/BreakoutGame.tsx": [
+      "src/utils/audio.ts"
+    ],
+    "src/components/games/FlappyGame.tsx": [
+      "src/utils/audio.ts"
+    ],
+    "src/components/games/Game2048.tsx": [
+      "src/utils/audio.ts"
+    ],
+    "src/components/games/MinesweeperGame.tsx": [
+      "src/utils/audio.ts"
+    ],
+    "src/components/games/SimonGame.tsx": [
+      "src/utils/audio.ts"
+    ],
+    "src/components/games/SnakeGame.tsx": [
+      "src/utils/audio.ts"
+    ],
+    "src/utils/audio.ts": []
+  }
+}

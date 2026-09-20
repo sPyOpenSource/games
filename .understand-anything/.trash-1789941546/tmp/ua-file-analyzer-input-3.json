@@ -1,0 +1,17 @@
+{
+  "projectRoot": "/Users/xuyi/Source/JavaScript/games",
+  "batchFiles": [
+    {"path": ".env.example", "language": "config", "sizeLines": 9, "fileCategory": "config"},
+    {"path": "index.html", "language": "html", "sizeLines": 18, "fileCategory": "markup"},
+    {"path": "metadata.json", "language": "json", "sizeLines": 6, "fileCategory": "config"},
+    {"path": "package.json", "language": "json", "sizeLines": 38, "fileCategory": "config"},
+    {"path": "tsconfig.json", "language": "json", "sizeLines": 27, "fileCategory": "config"}
+  ],
+  "batchImportData": {
+    ".env.example": [],
+    "index.html": [],
+    "metadata.json": [],
+    "package.json": [],
+    "tsconfig.json": []
+  }
+}

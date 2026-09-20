@@ -1,0 +1,4166 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 8,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/components/GameViewer.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 282,
+      "nonEmptyLines": 266,
+      "functions": [
+        {
+          "name": "GameViewer",
+          "startLine": 21,
+          "endLine": 282,
+          "params": [
+            "{\n  game,\n  stats,\n  onBack,\n  onSelectGame,\n  onGameOver,\n  onToggleSound,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GameViewer",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GameViewer",
+          "callee": "useState",
+          "lineNumber": 29
+        },
+        {
+          "caller": "GameViewer",
+          "callee": "useState",
+          "lineNumber": 30
+        },
+        {
+          "caller": "GameViewer",
+          "callee": "useState",
+          "lineNumber": 31
+        },
+        {
+          "caller": "toggleFullscreen",
+          "callee": "document.documentElement.requestFullscreen().then(() => setIsFullscreen(true)).catch",
+          "lineNumber": 35
+        },
+        {
+          "caller": "toggleFullscreen",
+          "callee": "document.documentElement.requestFullscreen().then",
+          "lineNumber": 35
+        },
+        {
+          "caller": "toggleFullscreen",
+          "callee": "document.documentElement.requestFullscreen",
+          "lineNumber": 35
+        },
+        {
+          "caller": "toggleFullscreen",
+          "callee": "setIsFullscreen",
+          "lineNumber": 35
+        },
+        {
+          "caller": "toggleFullscreen",
+          "callee": "document.exitFullscreen().then(() => setIsFullscreen(false)).catch",
+          "lineNumber": 37
+        },
+        {
+          "caller": "toggleFullscreen",
+          "callee": "document.exitFullscreen().then",
+          "lineNumber": 37
+        },
+        {
+          "caller": "toggleFullscreen",
+          "callee": "document.exitFullscreen",
+          "lineNumber": 37
+        },
+        {
+          "caller": "toggleFullscreen",
+          "callee": "setIsFullscreen",
+          "lineNumber": 37
+        },
+        {
+          "caller": "handleGameScore",
+          "callee": "onGameOver",
+          "lineNumber": 42
+        },
+        {
+          "caller": "renderCurrentGame",
+          "callee": "renderEmbeddedGame",
+          "lineNumber": 108
+        },
+        {
+          "caller": "renderCurrentGame",
+          "callee": "renderEmbeddedGame",
+          "lineNumber": 110
+        },
+        {
+          "caller": "renderCurrentGame",
+          "callee": "renderEmbeddedGame",
+          "lineNumber": 112
+        },
+        {
+          "caller": "renderCurrentGame",
+          "callee": "renderEmbeddedGame",
+          "lineNumber": 114
+        },
+        {
+          "caller": "renderCurrentGame",
+          "callee": "renderEmbeddedGame",
+          "lineNumber": 116
+        },
+        {
+          "caller": "GameViewer",
+          "callee": "setIsSwitcherOpen",
+          "lineNumber": 141
+        },
+        {
+          "caller": "GameViewer",
+          "callee": "setIsSwitcherOpen",
+          "lineNumber": 151
+        },
+        {
+          "caller": "GameViewer",
+          "callee": "GAMES_DATA.map",
+          "lineNumber": 156
+        },
+        {
+          "caller": "GameViewer",
+          "callee": "onSelectGame",
+          "lineNumber": 159
+        },
+        {
+          "caller": "GameViewer",
+          "callee": "setShowHelp",
+          "lineNumber": 189
+        },
+        {
+          "caller": "GameViewer",
+          "callee": "setShowHelp",
+          "lineNumber": 238
+        },
+        {
+          "caller": "GameViewer",
+          "callee": "game.instructions.map",
+          "lineNumber": 246
+        },
+        {
+          "caller": "GameViewer",
+          "callee": "game.controls.map",
+          "lineNumber": 261
+        },
+        {
+          "caller": "GameViewer",
+          "callee": "renderCurrentGame",
+          "lineNumber": 277
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/games/BreakoutGame.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 766,
+      "nonEmptyLines": 688,
+      "functions": [
+        {
+          "name": "BreakoutGame",
+          "startLine": 60,
+          "endLine": 766,
+          "params": [
+            "{ soundEnabled, onGameOver, highScore }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "BreakoutGame",
+          "line": 60,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "BreakoutGame",
+          "callee": "useRef",
+          "lineNumber": 61
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useState",
+          "lineNumber": 63
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useState",
+          "lineNumber": 64
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useState",
+          "lineNumber": 65
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useState",
+          "lineNumber": 66
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useState",
+          "lineNumber": 67
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useState",
+          "lineNumber": 68
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useState",
+          "lineNumber": 69
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useRef",
+          "lineNumber": 72
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useRef",
+          "lineNumber": 82
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useRef",
+          "lineNumber": 83
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useRef",
+          "lineNumber": 84
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useRef",
+          "lineNumber": 85
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useRef",
+          "lineNumber": 86
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useRef",
+          "lineNumber": 87
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useRef",
+          "lineNumber": 92
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useRef",
+          "lineNumber": 93
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useRef",
+          "lineNumber": 94
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useCallback",
+          "lineNumber": 97
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "bricks.push",
+          "lineNumber": 119
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useCallback",
+          "lineNumber": 134
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "Math.random",
+          "lineNumber": 140
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useCallback",
+          "lineNumber": 148
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "setLevel",
+          "lineNumber": 150
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "createLevelBricks",
+          "lineNumber": 151
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "resetBall",
+          "lineNumber": 156
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useCallback",
+          "lineNumber": 159
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "setScore",
+          "lineNumber": 162
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "setLives",
+          "lineNumber": 163
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "setIsGameOver",
+          "lineNumber": 164
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "setHasWon",
+          "lineNumber": 165
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "setIsPaused",
+          "lineNumber": 166
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "setIsPlaying",
+          "lineNumber": 167
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "startLevel",
+          "lineNumber": 168
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "SoundEffects.playClick",
+          "lineNumber": 169
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useCallback",
+          "lineNumber": 173
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "canvas.getBoundingClientRect",
+          "lineNumber": 176
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "Math.max",
+          "lineNumber": 181
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "Math.min",
+          "lineNumber": 181
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useEffect",
+          "lineNumber": 185
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "['ArrowLeft', 'ArrowRight', ' '].includes",
+          "lineNumber": 187
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "e.preventDefault",
+          "lineNumber": 188
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "e.key.toLowerCase",
+          "lineNumber": 196
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "startGame",
+          "lineNumber": 198
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "lasersRef.current.push",
+          "lineNumber": 203
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "SoundEffects.playBounce",
+          "lineNumber": 207
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "window.addEventListener",
+          "lineNumber": 222
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "window.addEventListener",
+          "lineNumber": 223
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "window.removeEventListener",
+          "lineNumber": 225
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "window.removeEventListener",
+          "lineNumber": 226
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "useEffect",
+          "lineNumber": 231
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "canvas.getContext",
+          "lineNumber": 234
+        },
+        {
+          "caller": "createParticles",
+          "callee": "Math.random",
+          "lineNumber": 241
+        },
+        {
+          "caller": "createParticles",
+          "callee": "Math.random",
+          "lineNumber": 242
+        },
+        {
+          "caller": "createParticles",
+          "callee": "particlesRef.current.push",
+          "lineNumber": 243
+        },
+        {
+          "caller": "createParticles",
+          "callee": "Math.cos",
+          "lineNumber": 246
+        },
+        {
+          "caller": "createParticles",
+          "callee": "Math.sin",
+          "lineNumber": 247
+        },
+        {
+          "caller": "createParticles",
+          "callee": "Math.random",
+          "lineNumber": 250
+        },
+        {
+          "caller": "spawnPowerUp",
+          "callee": "Math.random",
+          "lineNumber": 256
+        },
+        {
+          "caller": "spawnPowerUp",
+          "callee": "Math.random",
+          "lineNumber": 257
+        },
+        {
+          "caller": "spawnPowerUp",
+          "callee": "powerUpsRef.current.push",
+          "lineNumber": 280
+        },
+        {
+          "caller": "updateGame",
+          "callee": "Math.max",
+          "lineNumber": 297
+        },
+        {
+          "caller": "updateGame",
+          "callee": "Math.min",
+          "lineNumber": 300
+        },
+        {
+          "caller": "updateGame",
+          "callee": "createParticles",
+          "lineNumber": 321
+        },
+        {
+          "caller": "updateGame",
+          "callee": "setScore",
+          "lineNumber": 324
+        },
+        {
+          "caller": "updateGame",
+          "callee": "spawnPowerUp",
+          "lineNumber": 325
+        },
+        {
+          "caller": "updateGame",
+          "callee": "bricksRef.current.splice",
+          "lineNumber": 326
+        },
+        {
+          "caller": "updateGame",
+          "callee": "lasersRef.current.splice",
+          "lineNumber": 333
+        },
+        {
+          "caller": "updateGame",
+          "callee": "SoundEffects.playEat",
+          "lineNumber": 349
+        },
+        {
+          "caller": "updateGame",
+          "callee": "ballsRef.current.push",
+          "lineNumber": 352
+        },
+        {
+          "caller": "updateGame",
+          "callee": "Math.min",
+          "lineNumber": 362
+        },
+        {
+          "caller": "updateGame",
+          "callee": "setLives",
+          "lineNumber": 363
+        },
+        {
+          "caller": "updateGame",
+          "callee": "powerUpsRef.current.splice",
+          "lineNumber": 365
+        },
+        {
+          "caller": "updateGame",
+          "callee": "powerUpsRef.current.splice",
+          "lineNumber": 367
+        },
+        {
+          "caller": "updateGame",
+          "callee": "Math.abs",
+          "lineNumber": 380
+        },
+        {
+          "caller": "updateGame",
+          "callee": "SoundEffects.playBounce",
+          "lineNumber": 381
+        },
+        {
+          "caller": "updateGame",
+          "callee": "Math.abs",
+          "lineNumber": 384
+        },
+        {
+          "caller": "updateGame",
+          "callee": "SoundEffects.playBounce",
+          "lineNumber": 385
+        },
+        {
+          "caller": "updateGame",
+          "callee": "Math.abs",
+          "lineNumber": 390
+        },
+        {
+          "caller": "updateGame",
+          "callee": "SoundEffects.playBounce",
+          "lineNumber": 391
+        },
+        {
+          "caller": "updateGame",
+          "callee": "Math.sin",
+          "lineNumber": 407
+        },
+        {
+          "caller": "updateGame",
+          "callee": "Math.cos",
+          "lineNumber": 408
+        },
+        {
+          "caller": "updateGame",
+          "callee": "SoundEffects.playBounce",
+          "lineNumber": 410
+        },
+        {
+          "caller": "updateGame",
+          "callee": "createParticles",
+          "lineNumber": 411
+        },
+        {
+          "caller": "updateGame",
+          "callee": "SoundEffects.playPop",
+          "lineNumber": 427
+        },
+        {
+          "caller": "updateGame",
+          "callee": "createParticles",
+          "lineNumber": 428
+        },
+        {
+          "caller": "updateGame",
+          "callee": "bricksRef.current.forEach",
+          "lineNumber": 432
+        },
+        {
+          "caller": "updateGame",
+          "callee": "Math.hypot",
+          "lineNumber": 433
+        },
+        {
+          "caller": "updateGame",
+          "callee": "createParticles",
+          "lineNumber": 435
+        },
+        {
+          "caller": "updateGame",
+          "callee": "setScore",
+          "lineNumber": 442
+        },
+        {
+          "caller": "updateGame",
+          "callee": "spawnPowerUp",
+          "lineNumber": 443
+        },
+        {
+          "caller": "updateGame",
+          "callee": "bricksRef.current.splice",
+          "lineNumber": 444
+        },
+        {
+          "caller": "updateGame",
+          "callee": "ballsRef.current.splice",
+          "lineNumber": 452
+        },
+        {
+          "caller": "updateGame",
+          "callee": "setLives",
+          "lineNumber": 459
+        },
+        {
+          "caller": "updateGame",
+          "callee": "setIsGameOver",
+          "lineNumber": 461
+        },
+        {
+          "caller": "updateGame",
+          "callee": "SoundEffects.playGameOver",
+          "lineNumber": 462
+        },
+        {
+          "caller": "updateGame",
+          "callee": "onGameOver",
+          "lineNumber": 463
+        },
+        {
+          "caller": "updateGame",
+          "callee": "SoundEffects.playBounce",
+          "lineNumber": 465
+        },
+        {
+          "caller": "updateGame",
+          "callee": "resetBall",
+          "lineNumber": 466
+        },
+        {
+          "caller": "updateGame",
+          "callee": "SoundEffects.playWin",
+          "lineNumber": 473
+        },
+        {
+          "caller": "updateGame",
+          "callee": "startLevel",
+          "lineNumber": 474
+        },
+        {
+          "caller": "updateGame",
+          "callee": "setHasWon",
+          "lineNumber": 476
+        },
+        {
+          "caller": "updateGame",
+          "callee": "SoundEffects.playWin",
+          "lineNumber": 477
+        },
+        {
+          "caller": "updateGame",
+          "callee": "confetti",
+          "lineNumber": 478
+        },
+        {
+          "caller": "updateGame",
+          "callee": "onGameOver",
+          "lineNumber": 479
+        },
+        {
+          "caller": "updateGame",
+          "callee": "particlesRef.current.splice",
+          "lineNumber": 489
+        },
+        {
+          "caller": "render",
+          "callee": "updateGame",
+          "lineNumber": 494
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fillRect",
+          "lineNumber": 498
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 504
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.moveTo",
+          "lineNumber": 505
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.lineTo",
+          "lineNumber": 506
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.stroke",
+          "lineNumber": 507
+        },
+        {
+          "caller": "render",
+          "callee": "bricksRef.current.forEach",
+          "lineNumber": 511
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.save",
+          "lineNumber": 512
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 519
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.roundRect",
+          "lineNumber": 520
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 521
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fillRect",
+          "lineNumber": 525
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.restore",
+          "lineNumber": 526
+        },
+        {
+          "caller": "render",
+          "callee": "powerUpsRef.current.forEach",
+          "lineNumber": 530
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.save",
+          "lineNumber": 531
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 535
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.arc",
+          "lineNumber": 536
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 537
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fillText",
+          "lineNumber": 543
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.restore",
+          "lineNumber": 544
+        },
+        {
+          "caller": "render",
+          "callee": "lasersRef.current.forEach",
+          "lineNumber": 548
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.save",
+          "lineNumber": 549
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fillRect",
+          "lineNumber": 553
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.restore",
+          "lineNumber": 554
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.save",
+          "lineNumber": 559
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 563
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.roundRect",
+          "lineNumber": 564
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 565
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 569
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.roundRect",
+          "lineNumber": 570
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 571
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.restore",
+          "lineNumber": 572
+        },
+        {
+          "caller": "render",
+          "callee": "ballsRef.current.forEach",
+          "lineNumber": 575
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.save",
+          "lineNumber": 576
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 580
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.arc",
+          "lineNumber": 581
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 582
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.restore",
+          "lineNumber": 583
+        },
+        {
+          "caller": "render",
+          "callee": "particlesRef.current.forEach",
+          "lineNumber": 587
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.save",
+          "lineNumber": 588
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 591
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.arc",
+          "lineNumber": 592
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 593
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.restore",
+          "lineNumber": 594
+        },
+        {
+          "caller": "render",
+          "callee": "requestAnimationFrame",
+          "lineNumber": 597
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "render",
+          "lineNumber": 600
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "cancelAnimationFrame",
+          "lineNumber": 601
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "Math.max",
+          "lineNumber": 618
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "[...Array(5)].map",
+          "lineNumber": 630
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "Array",
+          "lineNumber": 630
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "setIsPaused",
+          "lineNumber": 642
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "handlePointerMove",
+          "lineNumber": 663
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "handlePointerMove",
+          "lineNumber": 664
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "setIsPaused",
+          "lineNumber": 697
+        },
+        {
+          "caller": "BreakoutGame",
+          "callee": "Math.max",
+          "lineNumber": 734
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/games/FlappyGame.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 479,
+      "nonEmptyLines": 418,
+      "functions": [
+        {
+          "name": "FlappyGame",
+          "startLine": 36,
+          "endLine": 479,
+          "params": [
+            "{ soundEnabled, onGameOver, highScore }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FlappyGame",
+          "line": 36,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "FlappyGame",
+          "callee": "useRef",
+          "lineNumber": 37
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "useState",
+          "lineNumber": 39
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "useState",
+          "lineNumber": 40
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "useState",
+          "lineNumber": 41
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "useRef",
+          "lineNumber": 44
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "useRef",
+          "lineNumber": 54
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "useRef",
+          "lineNumber": 55
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "useRef",
+          "lineNumber": 56
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "useRef",
+          "lineNumber": 57
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "useCallback",
+          "lineNumber": 59
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "Math.floor",
+          "lineNumber": 63
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "Math.random",
+          "lineNumber": 63
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "Math.random",
+          "lineNumber": 65
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "pipesRef.current.push",
+          "lineNumber": 67
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "useCallback",
+          "lineNumber": 80
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "setIsPlaying",
+          "lineNumber": 84
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "setIsGameOver",
+          "lineNumber": 85
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "setScore",
+          "lineNumber": 87
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "spawnPipe",
+          "lineNumber": 91
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "spawnPipe",
+          "lineNumber": 92
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "SoundEffects.playJump",
+          "lineNumber": 93
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "SoundEffects.playJump",
+          "lineNumber": 98
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "particlesRef.current.push",
+          "lineNumber": 103
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "Math.random",
+          "lineNumber": 105
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "Math.random",
+          "lineNumber": 106
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "Math.random",
+          "lineNumber": 107
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "Math.random",
+          "lineNumber": 109
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "useCallback",
+          "lineNumber": 114
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "setIsPlaying",
+          "lineNumber": 115
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "setIsGameOver",
+          "lineNumber": 116
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "setScore",
+          "lineNumber": 120
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "SoundEffects.playClick",
+          "lineNumber": 123
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "useEffect",
+          "lineNumber": 127
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "[' ', 'ArrowUp', 'w', 'W'].includes",
+          "lineNumber": 129
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "e.preventDefault",
+          "lineNumber": 130
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "jump",
+          "lineNumber": 131
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "window.addEventListener",
+          "lineNumber": 135
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "window.removeEventListener",
+          "lineNumber": 136
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "useEffect",
+          "lineNumber": 140
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "canvas.getContext",
+          "lineNumber": 143
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.createLinearGradient",
+          "lineNumber": 152
+        },
+        {
+          "caller": "render",
+          "callee": "skyGrad.addColorStop",
+          "lineNumber": 153
+        },
+        {
+          "caller": "render",
+          "callee": "skyGrad.addColorStop",
+          "lineNumber": 154
+        },
+        {
+          "caller": "render",
+          "callee": "skyGrad.addColorStop",
+          "lineNumber": 155
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fillRect",
+          "lineNumber": 157
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fillRect",
+          "lineNumber": 165
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fillRect",
+          "lineNumber": 173
+        },
+        {
+          "caller": "render",
+          "callee": "Math.min",
+          "lineNumber": 182
+        },
+        {
+          "caller": "render",
+          "callee": "Math.max",
+          "lineNumber": 182
+        },
+        {
+          "caller": "render",
+          "callee": "setIsGameOver",
+          "lineNumber": 187
+        },
+        {
+          "caller": "render",
+          "callee": "SoundEffects.playGameOver",
+          "lineNumber": 188
+        },
+        {
+          "caller": "render",
+          "callee": "onGameOver",
+          "lineNumber": 189
+        },
+        {
+          "caller": "render",
+          "callee": "setScore",
+          "lineNumber": 206
+        },
+        {
+          "caller": "render",
+          "callee": "SoundEffects.playEat",
+          "lineNumber": 207
+        },
+        {
+          "caller": "render",
+          "callee": "confetti",
+          "lineNumber": 210
+        },
+        {
+          "caller": "render",
+          "callee": "Math.hypot",
+          "lineNumber": 216
+        },
+        {
+          "caller": "render",
+          "callee": "setScore",
+          "lineNumber": 220
+        },
+        {
+          "caller": "render",
+          "callee": "SoundEffects.playPop",
+          "lineNumber": 221
+        },
+        {
+          "caller": "render",
+          "callee": "setIsGameOver",
+          "lineNumber": 231
+        },
+        {
+          "caller": "render",
+          "callee": "SoundEffects.playGameOver",
+          "lineNumber": 232
+        },
+        {
+          "caller": "render",
+          "callee": "onGameOver",
+          "lineNumber": 233
+        },
+        {
+          "caller": "render",
+          "callee": "pipesRef.current.splice",
+          "lineNumber": 238
+        },
+        {
+          "caller": "render",
+          "callee": "spawnPipe",
+          "lineNumber": 245
+        },
+        {
+          "caller": "render",
+          "callee": "pipesRef.current.forEach",
+          "lineNumber": 250
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.save",
+          "lineNumber": 252
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.createLinearGradient",
+          "lineNumber": 253
+        },
+        {
+          "caller": "render",
+          "callee": "topGrad.addColorStop",
+          "lineNumber": 254
+        },
+        {
+          "caller": "render",
+          "callee": "topGrad.addColorStop",
+          "lineNumber": 255
+        },
+        {
+          "caller": "render",
+          "callee": "topGrad.addColorStop",
+          "lineNumber": 256
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fillRect",
+          "lineNumber": 260
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fillRect",
+          "lineNumber": 264
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fillRect",
+          "lineNumber": 269
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fillRect",
+          "lineNumber": 273
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.restore",
+          "lineNumber": 274
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.save",
+          "lineNumber": 278
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 282
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.arc",
+          "lineNumber": 283
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 284
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fillText",
+          "lineNumber": 290
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.restore",
+          "lineNumber": 291
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fillRect",
+          "lineNumber": 297
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 300
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.moveTo",
+          "lineNumber": 301
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.lineTo",
+          "lineNumber": 302
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.stroke",
+          "lineNumber": 303
+        },
+        {
+          "caller": "render",
+          "callee": "particlesRef.current.splice",
+          "lineNumber": 313
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 316
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.arc",
+          "lineNumber": 317
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 318
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.save",
+          "lineNumber": 323
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.translate",
+          "lineNumber": 324
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.rotate",
+          "lineNumber": 325
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 332
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.moveTo",
+          "lineNumber": 333
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.lineTo",
+          "lineNumber": 334
+        },
+        {
+          "caller": "render",
+          "callee": "Math.random",
+          "lineNumber": 334
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.lineTo",
+          "lineNumber": 335
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.closePath",
+          "lineNumber": 336
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 337
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 344
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.ellipse",
+          "lineNumber": 345
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 346
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 350
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.ellipse",
+          "lineNumber": 351
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 352
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 356
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.moveTo",
+          "lineNumber": 357
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.lineTo",
+          "lineNumber": 358
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.lineTo",
+          "lineNumber": 359
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.closePath",
+          "lineNumber": 360
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 361
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.restore",
+          "lineNumber": 363
+        },
+        {
+          "caller": "render",
+          "callee": "requestAnimationFrame",
+          "lineNumber": 365
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "render",
+          "lineNumber": 368
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "cancelAnimationFrame",
+          "lineNumber": 369
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "getMedal",
+          "lineNumber": 379
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "Math.max",
+          "lineNumber": 395
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "e.stopPropagation",
+          "lineNumber": 439
+        },
+        {
+          "caller": "FlappyGame",
+          "callee": "Math.max",
+          "lineNumber": 460
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/games/Game2048.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 476,
+      "nonEmptyLines": 438,
+      "functions": [
+        {
+          "name": "Game2048",
+          "startLine": 14,
+          "endLine": 476,
+          "params": [
+            "{ soundEnabled, onGameOver, highScore }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Game2048",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Game2048",
+          "callee": "useState",
+          "lineNumber": 15
+        },
+        {
+          "caller": "Game2048",
+          "callee": "useState",
+          "lineNumber": 21
+        },
+        {
+          "caller": "Game2048",
+          "callee": "useState",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Game2048",
+          "callee": "useState",
+          "lineNumber": 23
+        },
+        {
+          "caller": "Game2048",
+          "callee": "useState",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Game2048",
+          "callee": "useState",
+          "lineNumber": 25
+        },
+        {
+          "caller": "Game2048",
+          "callee": "useState",
+          "lineNumber": 26
+        },
+        {
+          "caller": "Game2048",
+          "callee": "useState",
+          "lineNumber": 27
+        },
+        {
+          "caller": "Game2048",
+          "callee": "useRef",
+          "lineNumber": 29
+        },
+        {
+          "caller": "Game2048",
+          "callee": "useRef",
+          "lineNumber": 30
+        },
+        {
+          "caller": "Game2048",
+          "callee": "useCallback",
+          "lineNumber": 33
+        },
+        {
+          "caller": "Game2048",
+          "callee": "currentBoard.forEach",
+          "lineNumber": 35
+        },
+        {
+          "caller": "Game2048",
+          "callee": "row.forEach",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Game2048",
+          "callee": "emptyCells.push",
+          "lineNumber": 37
+        },
+        {
+          "caller": "Game2048",
+          "callee": "Math.floor",
+          "lineNumber": 43
+        },
+        {
+          "caller": "Game2048",
+          "callee": "Math.random",
+          "lineNumber": 43
+        },
+        {
+          "caller": "Game2048",
+          "callee": "currentBoard.map",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Game2048",
+          "callee": "Math.random",
+          "lineNumber": 46
+        },
+        {
+          "caller": "Game2048",
+          "callee": "useCallback",
+          "lineNumber": 50
+        },
+        {
+          "caller": "Game2048",
+          "callee": "addRandomTile",
+          "lineNumber": 57
+        },
+        {
+          "caller": "Game2048",
+          "callee": "addRandomTile",
+          "lineNumber": 58
+        },
+        {
+          "caller": "Game2048",
+          "callee": "setBoard",
+          "lineNumber": 59
+        },
+        {
+          "caller": "Game2048",
+          "callee": "setScore",
+          "lineNumber": 60
+        },
+        {
+          "caller": "Game2048",
+          "callee": "setHistory",
+          "lineNumber": 61
+        },
+        {
+          "caller": "Game2048",
+          "callee": "setUndoRemaining",
+          "lineNumber": 62
+        },
+        {
+          "caller": "Game2048",
+          "callee": "setWon",
+          "lineNumber": 63
+        },
+        {
+          "caller": "Game2048",
+          "callee": "setKeepPlaying",
+          "lineNumber": 64
+        },
+        {
+          "caller": "Game2048",
+          "callee": "setIsGameOver",
+          "lineNumber": 65
+        },
+        {
+          "caller": "Game2048",
+          "callee": "SoundEffects.playClick",
+          "lineNumber": 66
+        },
+        {
+          "caller": "Game2048",
+          "callee": "useEffect",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Game2048",
+          "callee": "initGame",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Game2048",
+          "callee": "useCallback",
+          "lineNumber": 75
+        },
+        {
+          "caller": "slideRow",
+          "callee": "row.filter",
+          "lineNumber": 88
+        },
+        {
+          "caller": "slideRow",
+          "callee": "newRow.push",
+          "lineNumber": 95
+        },
+        {
+          "caller": "slideRow",
+          "callee": "newRow.push",
+          "lineNumber": 99
+        },
+        {
+          "caller": "slideRow",
+          "callee": "newRow.push",
+          "lineNumber": 104
+        },
+        {
+          "caller": "Game2048",
+          "callee": "useCallback",
+          "lineNumber": 110
+        },
+        {
+          "caller": "Game2048",
+          "callee": "board.map",
+          "lineNumber": 116
+        },
+        {
+          "caller": "Game2048",
+          "callee": "slideRow",
+          "lineNumber": 127
+        },
+        {
+          "caller": "Game2048",
+          "callee": "newRow.some",
+          "lineNumber": 130
+        },
+        {
+          "caller": "Game2048",
+          "callee": "[...board[r]].reverse",
+          "lineNumber": 134
+        },
+        {
+          "caller": "Game2048",
+          "callee": "slideRow",
+          "lineNumber": 135
+        },
+        {
+          "caller": "Game2048",
+          "callee": "newRow.reverse",
+          "lineNumber": 136
+        },
+        {
+          "caller": "Game2048",
+          "callee": "restored.some",
+          "lineNumber": 139
+        },
+        {
+          "caller": "Game2048",
+          "callee": "slideRow",
+          "lineNumber": 144
+        },
+        {
+          "caller": "Game2048",
+          "callee": "slideRow",
+          "lineNumber": 154
+        },
+        {
+          "caller": "Game2048",
+          "callee": "newRow.reverse",
+          "lineNumber": 156
+        },
+        {
+          "caller": "Game2048",
+          "callee": "setHistory",
+          "lineNumber": 165
+        },
+        {
+          "caller": "Game2048",
+          "callee": "prev.slice",
+          "lineNumber": 165
+        },
+        {
+          "caller": "Game2048",
+          "callee": "addRandomTile",
+          "lineNumber": 166
+        },
+        {
+          "caller": "Game2048",
+          "callee": "setBoard",
+          "lineNumber": 167
+        },
+        {
+          "caller": "Game2048",
+          "callee": "setScore",
+          "lineNumber": 170
+        },
+        {
+          "caller": "Game2048",
+          "callee": "setScoreAdd",
+          "lineNumber": 173
+        },
+        {
+          "caller": "Game2048",
+          "callee": "setTimeout",
+          "lineNumber": 174
+        },
+        {
+          "caller": "Game2048",
+          "callee": "setScoreAdd",
+          "lineNumber": 174
+        },
+        {
+          "caller": "Game2048",
+          "callee": "SoundEffects.playPop",
+          "lineNumber": 175
+        },
+        {
+          "caller": "Game2048",
+          "callee": "Math.min",
+          "lineNumber": 175
+        },
+        {
+          "caller": "Game2048",
+          "callee": "SoundEffects.playBounce",
+          "lineNumber": 177
+        },
+        {
+          "caller": "Game2048",
+          "callee": "updatedWithNew.some",
+          "lineNumber": 182
+        },
+        {
+          "caller": "Game2048",
+          "callee": "row.some",
+          "lineNumber": 182
+        },
+        {
+          "caller": "Game2048",
+          "callee": "setWon",
+          "lineNumber": 184
+        },
+        {
+          "caller": "Game2048",
+          "callee": "SoundEffects.playWin",
+          "lineNumber": 185
+        },
+        {
+          "caller": "Game2048",
+          "callee": "confetti",
+          "lineNumber": 186
+        },
+        {
+          "caller": "Game2048",
+          "callee": "canMove",
+          "lineNumber": 191
+        },
+        {
+          "caller": "Game2048",
+          "callee": "setIsGameOver",
+          "lineNumber": 192
+        },
+        {
+          "caller": "Game2048",
+          "callee": "SoundEffects.playGameOver",
+          "lineNumber": 193
+        },
+        {
+          "caller": "Game2048",
+          "callee": "onGameOver",
+          "lineNumber": 194
+        },
+        {
+          "caller": "handleUndo",
+          "callee": "setBoard",
+          "lineNumber": 204
+        },
+        {
+          "caller": "handleUndo",
+          "callee": "setScore",
+          "lineNumber": 205
+        },
+        {
+          "caller": "handleUndo",
+          "callee": "setHistory",
+          "lineNumber": 206
+        },
+        {
+          "caller": "handleUndo",
+          "callee": "prev.slice",
+          "lineNumber": 206
+        },
+        {
+          "caller": "handleUndo",
+          "callee": "setUndoRemaining",
+          "lineNumber": 207
+        },
+        {
+          "caller": "handleUndo",
+          "callee": "setIsGameOver",
+          "lineNumber": 208
+        },
+        {
+          "caller": "handleUndo",
+          "callee": "SoundEffects.playClick",
+          "lineNumber": 209
+        },
+        {
+          "caller": "Game2048",
+          "callee": "useEffect",
+          "lineNumber": 213
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes",
+          "lineNumber": 215
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "e.preventDefault",
+          "lineNumber": 216
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "move",
+          "lineNumber": 223
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "move",
+          "lineNumber": 228
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "move",
+          "lineNumber": 233
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "move",
+          "lineNumber": 238
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "handleUndo",
+          "lineNumber": 242
+        },
+        {
+          "caller": "Game2048",
+          "callee": "window.addEventListener",
+          "lineNumber": 247
+        },
+        {
+          "caller": "Game2048",
+          "callee": "window.removeEventListener",
+          "lineNumber": 248
+        },
+        {
+          "caller": "handleTouchEnd",
+          "callee": "Math.abs",
+          "lineNumber": 264
+        },
+        {
+          "caller": "handleTouchEnd",
+          "callee": "Math.abs",
+          "lineNumber": 264
+        },
+        {
+          "caller": "handleTouchEnd",
+          "callee": "Math.abs",
+          "lineNumber": 266
+        },
+        {
+          "caller": "handleTouchEnd",
+          "callee": "Math.abs",
+          "lineNumber": 266
+        },
+        {
+          "caller": "handleTouchEnd",
+          "callee": "move",
+          "lineNumber": 267
+        },
+        {
+          "caller": "handleTouchEnd",
+          "callee": "move",
+          "lineNumber": 268
+        },
+        {
+          "caller": "handleTouchEnd",
+          "callee": "move",
+          "lineNumber": 270
+        },
+        {
+          "caller": "handleTouchEnd",
+          "callee": "move",
+          "lineNumber": 271
+        },
+        {
+          "caller": "Game2048",
+          "callee": "Math.max",
+          "lineNumber": 325
+        },
+        {
+          "caller": "Game2048",
+          "callee": "board.map",
+          "lineNumber": 364
+        },
+        {
+          "caller": "Game2048",
+          "callee": "row.map",
+          "lineNumber": 365
+        },
+        {
+          "caller": "Game2048",
+          "callee": "getTileStyle",
+          "lineNumber": 366
+        },
+        {
+          "caller": "Game2048",
+          "callee": "setKeepPlaying",
+          "lineNumber": 403
+        },
+        {
+          "caller": "Game2048",
+          "callee": "Math.max",
+          "lineNumber": 431
+        },
+        {
+          "caller": "Game2048",
+          "callee": "move",
+          "lineNumber": 448
+        },
+        {
+          "caller": "Game2048",
+          "callee": "move",
+          "lineNumber": 455
+        },
+        {
+          "caller": "Game2048",
+          "callee": "move",
+          "lineNumber": 461
+        },
+        {
+          "caller": "Game2048",
+          "callee": "move",
+          "lineNumber": 467
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/games/MinesweeperGame.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 436,
+      "nonEmptyLines": 391,
+      "functions": [
+        {
+          "name": "MinesweeperGame",
+          "startLine": 29,
+          "endLine": 436,
+          "params": [
+            "{\n  soundEnabled,\n  onGameOver,\n  highScore,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "MinesweeperGame",
+          "line": 29,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "MinesweeperGame",
+          "callee": "useState",
+          "lineNumber": 34
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "useState",
+          "lineNumber": 35
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "useState",
+          "lineNumber": 36
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "useState",
+          "lineNumber": 37
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "useState",
+          "lineNumber": 38
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "useState",
+          "lineNumber": 39
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "useState",
+          "lineNumber": 40
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "useState",
+          "lineNumber": 41
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "useState",
+          "lineNumber": 42
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "useState",
+          "lineNumber": 43
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "useRef",
+          "lineNumber": 45
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "useCallback",
+          "lineNumber": 50
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "row.push",
+          "lineNumber": 55
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "newGrid.push",
+          "lineNumber": 64
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "setGrid",
+          "lineNumber": 66
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "setIsFirstClick",
+          "lineNumber": 67
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "setIsGameOver",
+          "lineNumber": 68
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "setHasWon",
+          "lineNumber": 69
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "setFlagsRemaining",
+          "lineNumber": 70
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "setSeconds",
+          "lineNumber": 71
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "setTimerActive",
+          "lineNumber": 72
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "setHintsLeft",
+          "lineNumber": 73
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "clearInterval",
+          "lineNumber": 74
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "SoundEffects.playClick",
+          "lineNumber": 75
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "useEffect",
+          "lineNumber": 78
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "initBoard",
+          "lineNumber": 79
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "useEffect",
+          "lineNumber": 83
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "setInterval",
+          "lineNumber": 85
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "setSeconds",
+          "lineNumber": 86
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "clearInterval",
+          "lineNumber": 90
+        },
+        {
+          "caller": "populateMines",
+          "callee": "currentGrid.map",
+          "lineNumber": 96
+        },
+        {
+          "caller": "populateMines",
+          "callee": "r.map",
+          "lineNumber": 96
+        },
+        {
+          "caller": "populateMines",
+          "callee": "Math.floor",
+          "lineNumber": 100
+        },
+        {
+          "caller": "populateMines",
+          "callee": "Math.random",
+          "lineNumber": 100
+        },
+        {
+          "caller": "populateMines",
+          "callee": "Math.floor",
+          "lineNumber": 101
+        },
+        {
+          "caller": "populateMines",
+          "callee": "Math.random",
+          "lineNumber": 101
+        },
+        {
+          "caller": "populateMines",
+          "callee": "Math.abs",
+          "lineNumber": 104
+        },
+        {
+          "caller": "populateMines",
+          "callee": "Math.abs",
+          "lineNumber": 104
+        },
+        {
+          "caller": "revealNeighbors",
+          "callee": "queue.shift",
+          "lineNumber": 139
+        },
+        {
+          "caller": "revealNeighbors",
+          "callee": "visited.has",
+          "lineNumber": 141
+        },
+        {
+          "caller": "revealNeighbors",
+          "callee": "visited.add",
+          "lineNumber": 142
+        },
+        {
+          "caller": "revealNeighbors",
+          "callee": "queue.push",
+          "lineNumber": 156
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "handleToggleFlag",
+          "lineNumber": 169
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "grid.map",
+          "lineNumber": 173
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "row.map",
+          "lineNumber": 173
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "populateMines",
+          "lineNumber": 176
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "setIsFirstClick",
+          "lineNumber": 177
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "setTimerActive",
+          "lineNumber": 178
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "currentGrid.forEach",
+          "lineNumber": 188
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "row.forEach",
+          "lineNumber": 189
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "setGrid",
+          "lineNumber": 193
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "setIsGameOver",
+          "lineNumber": 194
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "setTimerActive",
+          "lineNumber": 195
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "SoundEffects.playGameOver",
+          "lineNumber": 196
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "revealNeighbors",
+          "lineNumber": 202
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "SoundEffects.playPop",
+          "lineNumber": 207
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "setGrid",
+          "lineNumber": 208
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "currentGrid.forEach",
+          "lineNumber": 212
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "row.forEach",
+          "lineNumber": 213
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "setHasWon",
+          "lineNumber": 219
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "setTimerActive",
+          "lineNumber": 220
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "SoundEffects.playWin",
+          "lineNumber": 221
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "confetti",
+          "lineNumber": 222
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "Math.max",
+          "lineNumber": 223
+        },
+        {
+          "caller": "handleCellClick",
+          "callee": "onGameOver",
+          "lineNumber": 224
+        },
+        {
+          "caller": "handleToggleFlag",
+          "callee": "grid.map",
+          "lineNumber": 230
+        },
+        {
+          "caller": "handleToggleFlag",
+          "callee": "row.map",
+          "lineNumber": 230
+        },
+        {
+          "caller": "handleToggleFlag",
+          "callee": "setFlagsRemaining",
+          "lineNumber": 236
+        },
+        {
+          "caller": "handleToggleFlag",
+          "callee": "setFlagsRemaining",
+          "lineNumber": 240
+        },
+        {
+          "caller": "handleToggleFlag",
+          "callee": "SoundEffects.playClick",
+          "lineNumber": 243
+        },
+        {
+          "caller": "handleToggleFlag",
+          "callee": "setGrid",
+          "lineNumber": 244
+        },
+        {
+          "caller": "useHint",
+          "callee": "grid.forEach",
+          "lineNumber": 252
+        },
+        {
+          "caller": "useHint",
+          "callee": "row.forEach",
+          "lineNumber": 253
+        },
+        {
+          "caller": "useHint",
+          "callee": "unrevealedSafeCells.push",
+          "lineNumber": 255
+        },
+        {
+          "caller": "useHint",
+          "callee": "Math.floor",
+          "lineNumber": 261
+        },
+        {
+          "caller": "useHint",
+          "callee": "Math.random",
+          "lineNumber": 261
+        },
+        {
+          "caller": "useHint",
+          "callee": "setHintsLeft",
+          "lineNumber": 262
+        },
+        {
+          "caller": "useHint",
+          "callee": "setSeconds",
+          "lineNumber": 263
+        },
+        {
+          "caller": "useHint",
+          "callee": "handleCellClick",
+          "lineNumber": 264
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "setDifficulty",
+          "lineNumber": 307
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "setFlagMode",
+          "lineNumber": 328
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "Math.min",
+          "lineNumber": 360
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "grid.map",
+          "lineNumber": 363
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "row.map",
+          "lineNumber": 364
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "handleCellClick",
+          "lineNumber": 368
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "e.preventDefault",
+          "lineNumber": 370
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "handleToggleFlag",
+          "lineNumber": 371
+        },
+        {
+          "caller": "MinesweeperGame",
+          "callee": "getNumberColor",
+          "lineNumber": 385
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/games/SimonGame.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 272,
+      "nonEmptyLines": 246,
+      "functions": [
+        {
+          "name": "SimonGame",
+          "startLine": 19,
+          "endLine": 272,
+          "params": [
+            "{ soundEnabled, onGameOver, highScore }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SimonGame",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SimonGame",
+          "callee": "useState",
+          "lineNumber": 20
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "useState",
+          "lineNumber": 21
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "useState",
+          "lineNumber": 22
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "useState",
+          "lineNumber": 23
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "useState",
+          "lineNumber": 24
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "useState",
+          "lineNumber": 25
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "useState",
+          "lineNumber": 26
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "useRef",
+          "lineNumber": 28
+        },
+        {
+          "caller": "clearAllTimeouts",
+          "callee": "timeoutRefs.current.forEach",
+          "lineNumber": 31
+        },
+        {
+          "caller": "clearAllTimeouts",
+          "callee": "clearTimeout",
+          "lineNumber": 31
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "useEffect",
+          "lineNumber": 35
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "clearAllTimeouts",
+          "lineNumber": 36
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "useCallback",
+          "lineNumber": 39
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "setActivePad",
+          "lineNumber": 40
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "SoundEffects.playSimonTone",
+          "lineNumber": 41
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "setTimeout",
+          "lineNumber": 42
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "setActivePad",
+          "lineNumber": 43
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "useCallback",
+          "lineNumber": 47
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "clearAllTimeouts",
+          "lineNumber": 48
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "setIsShowingSequence",
+          "lineNumber": 49
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "Math.max",
+          "lineNumber": 51
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "Math.max",
+          "lineNumber": 52
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "seq.forEach",
+          "lineNumber": 54
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "setTimeout",
+          "lineNumber": 56
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "flashPad",
+          "lineNumber": 57
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "setTimeout",
+          "lineNumber": 59
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "setIsShowingSequence",
+          "lineNumber": 60
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "timeoutRefs.current.push",
+          "lineNumber": 64
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "useCallback",
+          "lineNumber": 68
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "Math.floor",
+          "lineNumber": 69
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "Math.random",
+          "lineNumber": 69
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "setSequence",
+          "lineNumber": 71
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "setPlayerStep",
+          "lineNumber": 72
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "setRound",
+          "lineNumber": 73
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "playSequence",
+          "lineNumber": 74
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "useCallback",
+          "lineNumber": 77
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "clearAllTimeouts",
+          "lineNumber": 78
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "setIsGameOver",
+          "lineNumber": 79
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "setIsPlaying",
+          "lineNumber": 80
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "setSequence",
+          "lineNumber": 81
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "setPlayerStep",
+          "lineNumber": 82
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "setRound",
+          "lineNumber": 83
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "nextRound",
+          "lineNumber": 84
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "SoundEffects.playClick",
+          "lineNumber": 85
+        },
+        {
+          "caller": "handlePadClick",
+          "callee": "flashPad",
+          "lineNumber": 91
+        },
+        {
+          "caller": "handlePadClick",
+          "callee": "SoundEffects.playEat",
+          "lineNumber": 99
+        },
+        {
+          "caller": "handlePadClick",
+          "callee": "confetti",
+          "lineNumber": 101
+        },
+        {
+          "caller": "handlePadClick",
+          "callee": "setTimeout",
+          "lineNumber": 103
+        },
+        {
+          "caller": "handlePadClick",
+          "callee": "nextRound",
+          "lineNumber": 104
+        },
+        {
+          "caller": "handlePadClick",
+          "callee": "setPlayerStep",
+          "lineNumber": 107
+        },
+        {
+          "caller": "handlePadClick",
+          "callee": "setIsGameOver",
+          "lineNumber": 111
+        },
+        {
+          "caller": "handlePadClick",
+          "callee": "setIsPlaying",
+          "lineNumber": 112
+        },
+        {
+          "caller": "handlePadClick",
+          "callee": "SoundEffects.playGameOver",
+          "lineNumber": 113
+        },
+        {
+          "caller": "handlePadClick",
+          "callee": "onGameOver",
+          "lineNumber": 114
+        },
+        {
+          "caller": "handlePadClick",
+          "callee": "Math.max",
+          "lineNumber": 114
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "useEffect",
+          "lineNumber": 119
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "handlePadClick",
+          "lineNumber": 126
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "handlePadClick",
+          "lineNumber": 131
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "handlePadClick",
+          "lineNumber": 136
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "handlePadClick",
+          "lineNumber": 141
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "window.addEventListener",
+          "lineNumber": 146
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "window.removeEventListener",
+          "lineNumber": 147
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "Math.max",
+          "lineNumber": 164
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "playSequence",
+          "lineNumber": 171
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "COLORS.map",
+          "lineNumber": 199
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "handlePadClick",
+          "lineNumber": 204
+        },
+        {
+          "caller": "SimonGame",
+          "callee": "Math.max",
+          "lineNumber": 255
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/games/SnakeGame.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 589,
+      "nonEmptyLines": 525,
+      "functions": [
+        {
+          "name": "SnakeGame",
+          "startLine": 28,
+          "endLine": 589,
+          "params": [
+            "{ soundEnabled, onGameOver, highScore }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SnakeGame",
+          "line": 28,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SnakeGame",
+          "callee": "useRef",
+          "lineNumber": 29
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useState",
+          "lineNumber": 31
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useState",
+          "lineNumber": 32
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useState",
+          "lineNumber": 33
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useState",
+          "lineNumber": 34
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useState",
+          "lineNumber": 35
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useState",
+          "lineNumber": 36
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useState",
+          "lineNumber": 37
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useRef",
+          "lineNumber": 40
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useRef",
+          "lineNumber": 45
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useRef",
+          "lineNumber": 46
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useRef",
+          "lineNumber": 47
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useRef",
+          "lineNumber": 48
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useRef",
+          "lineNumber": 49
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useRef",
+          "lineNumber": 50
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useCallback",
+          "lineNumber": 52
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useCallback",
+          "lineNumber": 62
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "Math.floor",
+          "lineNumber": 67
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "Math.random",
+          "lineNumber": 67
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "Math.floor",
+          "lineNumber": 68
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "Math.random",
+          "lineNumber": 68
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "snake.some",
+          "lineNumber": 70
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useCallback",
+          "lineNumber": 75
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "getRandomEmptyPos",
+          "lineNumber": 76
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "Math.random",
+          "lineNumber": 85
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "getRandomEmptyPos",
+          "lineNumber": 86
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "Math.random",
+          "lineNumber": 87
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "Date.now",
+          "lineNumber": 93
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useCallback",
+          "lineNumber": 98
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "setScore",
+          "lineNumber": 107
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "setCombo",
+          "lineNumber": 108
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "setIsDead",
+          "lineNumber": 109
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "setIsPaused",
+          "lineNumber": 110
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "setIsPlaying",
+          "lineNumber": 111
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "spawnFood",
+          "lineNumber": 113
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "SoundEffects.playClick",
+          "lineNumber": 114
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useCallback",
+          "lineNumber": 118
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useEffect",
+          "lineNumber": 131
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', ' '].includes",
+          "lineNumber": 133
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "e.preventDefault",
+          "lineNumber": 134
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "e.key.toLowerCase",
+          "lineNumber": 137
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "setIsPaused",
+          "lineNumber": 139
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "startGame",
+          "lineNumber": 141
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "changeDirection",
+          "lineNumber": 152
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "changeDirection",
+          "lineNumber": 157
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "changeDirection",
+          "lineNumber": 162
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "changeDirection",
+          "lineNumber": 167
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "window.addEventListener",
+          "lineNumber": 172
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "window.removeEventListener",
+          "lineNumber": 173
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useEffect",
+          "lineNumber": 177
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "setInterval",
+          "lineNumber": 180
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "setIsDead",
+          "lineNumber": 203
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "setIsPlaying",
+          "lineNumber": 204
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "SoundEffects.playGameOver",
+          "lineNumber": 205
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "onGameOver",
+          "lineNumber": 206
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "snake.some",
+          "lineNumber": 212
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "setIsDead",
+          "lineNumber": 214
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "setIsPlaying",
+          "lineNumber": 215
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "SoundEffects.playGameOver",
+          "lineNumber": 216
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "onGameOver",
+          "lineNumber": 217
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "snake.unshift",
+          "lineNumber": 221
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "spawnFood",
+          "lineNumber": 230
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "Date.now",
+          "lineNumber": 242
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "Math.min",
+          "lineNumber": 248
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "setCombo",
+          "lineNumber": 250
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "setScore",
+          "lineNumber": 254
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "SoundEffects.playEat",
+          "lineNumber": 256
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "confetti",
+          "lineNumber": 260
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "snake.pop",
+          "lineNumber": 263
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "Date.now",
+          "lineNumber": 267
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "getSpeedMs",
+          "lineNumber": 272
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "clearInterval",
+          "lineNumber": 274
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "useEffect",
+          "lineNumber": 278
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "canvas.getContext",
+          "lineNumber": 281
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fillRect",
+          "lineNumber": 293
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 299
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.moveTo",
+          "lineNumber": 300
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.lineTo",
+          "lineNumber": 301
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.stroke",
+          "lineNumber": 302
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 304
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.moveTo",
+          "lineNumber": 305
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.lineTo",
+          "lineNumber": 306
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.stroke",
+          "lineNumber": 307
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.strokeRect",
+          "lineNumber": 313
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.save",
+          "lineNumber": 321
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 325
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.arc",
+          "lineNumber": 326
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 327
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 331
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.arc",
+          "lineNumber": 332
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 333
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.restore",
+          "lineNumber": 334
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.save",
+          "lineNumber": 344
+        },
+        {
+          "caller": "render",
+          "callee": "Math.sin",
+          "lineNumber": 350
+        },
+        {
+          "caller": "render",
+          "callee": "Date.now",
+          "lineNumber": 350
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 353
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.moveTo",
+          "lineNumber": 354
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.lineTo",
+          "lineNumber": 355
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.lineTo",
+          "lineNumber": 356
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.lineTo",
+          "lineNumber": 357
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.closePath",
+          "lineNumber": 358
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 359
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.restore",
+          "lineNumber": 360
+        },
+        {
+          "caller": "render",
+          "callee": "snake.forEach",
+          "lineNumber": 365
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.save",
+          "lineNumber": 371
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 378
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.roundRect",
+          "lineNumber": 379
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 380
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fillRect",
+          "lineNumber": 396
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fillRect",
+          "lineNumber": 397
+        },
+        {
+          "caller": "render",
+          "callee": "Math.max",
+          "lineNumber": 400
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 402
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.roundRect",
+          "lineNumber": 403
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 404
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.restore",
+          "lineNumber": 406
+        },
+        {
+          "caller": "render",
+          "callee": "requestAnimationFrame",
+          "lineNumber": 409
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "render",
+          "lineNumber": 412
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "cancelAnimationFrame",
+          "lineNumber": 413
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "Math.max",
+          "lineNumber": 437
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "setPortalMode",
+          "lineNumber": 445
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "setSpeedLevel",
+          "lineNumber": 459
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "setIsPaused",
+          "lineNumber": 470
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "setIsPaused",
+          "lineNumber": 523
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "Math.max",
+          "lineNumber": 544
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "changeDirection",
+          "lineNumber": 561
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "changeDirection",
+          "lineNumber": 568
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "changeDirection",
+          "lineNumber": 574
+        },
+        {
+          "caller": "SnakeGame",
+          "callee": "changeDirection",
+          "lineNumber": 580
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/utils/audio.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 207,
+      "nonEmptyLines": 165,
+      "functions": [
+        {
+          "name": "getAudioContext",
+          "startLine": 5,
+          "endLine": 17,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SoundEffects",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getAudioContext",
+          "callee": "audioCtx.resume",
+          "lineNumber": 14
+        },
+        {
+          "caller": "playClick",
+          "callee": "getAudioContext",
+          "lineNumber": 23
+        },
+        {
+          "caller": "playClick",
+          "callee": "ctx.createOscillator",
+          "lineNumber": 26
+        },
+        {
+          "caller": "playClick",
+          "callee": "ctx.createGain",
+          "lineNumber": 27
+        },
+        {
+          "caller": "playClick",
+          "callee": "osc.frequency.setValueAtTime",
+          "lineNumber": 29
+        },
+        {
+          "caller": "playClick",
+          "callee": "osc.frequency.exponentialRampToValueAtTime",
+          "lineNumber": 30
+        },
+        {
+          "caller": "playClick",
+          "callee": "gain.gain.setValueAtTime",
+          "lineNumber": 32
+        },
+        {
+          "caller": "playClick",
+          "callee": "gain.gain.exponentialRampToValueAtTime",
+          "lineNumber": 33
+        },
+        {
+          "caller": "playClick",
+          "callee": "osc.connect",
+          "lineNumber": 35
+        },
+        {
+          "caller": "playClick",
+          "callee": "gain.connect",
+          "lineNumber": 36
+        },
+        {
+          "caller": "playClick",
+          "callee": "osc.start",
+          "lineNumber": 37
+        },
+        {
+          "caller": "playClick",
+          "callee": "osc.stop",
+          "lineNumber": 38
+        },
+        {
+          "caller": "playEat",
+          "callee": "getAudioContext",
+          "lineNumber": 44
+        },
+        {
+          "caller": "playEat",
+          "callee": "ctx.createOscillator",
+          "lineNumber": 48
+        },
+        {
+          "caller": "playEat",
+          "callee": "ctx.createGain",
+          "lineNumber": 49
+        },
+        {
+          "caller": "playEat",
+          "callee": "osc.frequency.setValueAtTime",
+          "lineNumber": 52
+        },
+        {
+          "caller": "playEat",
+          "callee": "osc.frequency.setValueAtTime",
+          "lineNumber": 53
+        },
+        {
+          "caller": "playEat",
+          "callee": "osc.frequency.setValueAtTime",
+          "lineNumber": 54
+        },
+        {
+          "caller": "playEat",
+          "callee": "gain.gain.setValueAtTime",
+          "lineNumber": 56
+        },
+        {
+          "caller": "playEat",
+          "callee": "gain.gain.exponentialRampToValueAtTime",
+          "lineNumber": 57
+        },
+        {
+          "caller": "playEat",
+          "callee": "osc.connect",
+          "lineNumber": 59
+        },
+        {
+          "caller": "playEat",
+          "callee": "gain.connect",
+          "lineNumber": 60
+        },
+        {
+          "caller": "playEat",
+          "callee": "osc.start",
+          "lineNumber": 61
+        },
+        {
+          "caller": "playEat",
+          "callee": "osc.stop",
+          "lineNumber": 62
+        },
+        {
+          "caller": "playJump",
+          "callee": "getAudioContext",
+          "lineNumber": 68
+        },
+        {
+          "caller": "playJump",
+          "callee": "ctx.createOscillator",
+          "lineNumber": 72
+        },
+        {
+          "caller": "playJump",
+          "callee": "ctx.createGain",
+          "lineNumber": 73
+        },
+        {
+          "caller": "playJump",
+          "callee": "osc.frequency.setValueAtTime",
+          "lineNumber": 76
+        },
+        {
+          "caller": "playJump",
+          "callee": "osc.frequency.exponentialRampToValueAtTime",
+          "lineNumber": 77
+        },
+        {
+          "caller": "playJump",
+          "callee": "gain.gain.setValueAtTime",
+          "lineNumber": 79
+        },
+        {
+          "caller": "playJump",
+          "callee": "gain.gain.exponentialRampToValueAtTime",
+          "lineNumber": 80
+        },
+        {
+          "caller": "playJump",
+          "callee": "osc.connect",
+          "lineNumber": 82
+        },
+        {
+          "caller": "playJump",
+          "callee": "gain.connect",
+          "lineNumber": 83
+        },
+        {
+          "caller": "playJump",
+          "callee": "osc.start",
+          "lineNumber": 84
+        },
+        {
+          "caller": "playJump",
+          "callee": "osc.stop",
+          "lineNumber": 85
+        },
+        {
+          "caller": "playPop",
+          "callee": "getAudioContext",
+          "lineNumber": 91
+        },
+        {
+          "caller": "playPop",
+          "callee": "ctx.createOscillator",
+          "lineNumber": 95
+        },
+        {
+          "caller": "playPop",
+          "callee": "ctx.createGain",
+          "lineNumber": 96
+        },
+        {
+          "caller": "playPop",
+          "callee": "Math.min",
+          "lineNumber": 99
+        },
+        {
+          "caller": "playPop",
+          "callee": "osc.frequency.setValueAtTime",
+          "lineNumber": 100
+        },
+        {
+          "caller": "playPop",
+          "callee": "osc.frequency.exponentialRampToValueAtTime",
+          "lineNumber": 101
+        },
+        {
+          "caller": "playPop",
+          "callee": "gain.gain.setValueAtTime",
+          "lineNumber": 103
+        },
+        {
+          "caller": "playPop",
+          "callee": "gain.gain.exponentialRampToValueAtTime",
+          "lineNumber": 104
+        },
+        {
+          "caller": "playPop",
+          "callee": "osc.connect",
+          "lineNumber": 106
+        },
+        {
+          "caller": "playPop",
+          "callee": "gain.connect",
+          "lineNumber": 107
+        },
+        {
+          "caller": "playPop",
+          "callee": "osc.start",
+          "lineNumber": 108
+        },
+        {
+          "caller": "playPop",
+          "callee": "osc.stop",
+          "lineNumber": 109
+        },
+        {
+          "caller": "playBounce",
+          "callee": "getAudioContext",
+          "lineNumber": 115
+        },
+        {
+          "caller": "playBounce",
+          "callee": "ctx.createOscillator",
+          "lineNumber": 119
+        },
+        {
+          "caller": "playBounce",
+          "callee": "ctx.createGain",
+          "lineNumber": 120
+        },
+        {
+          "caller": "playBounce",
+          "callee": "osc.frequency.setValueAtTime",
+          "lineNumber": 123
+        },
+        {
+          "caller": "playBounce",
+          "callee": "osc.frequency.exponentialRampToValueAtTime",
+          "lineNumber": 124
+        },
+        {
+          "caller": "playBounce",
+          "callee": "gain.gain.setValueAtTime",
+          "lineNumber": 126
+        },
+        {
+          "caller": "playBounce",
+          "callee": "gain.gain.exponentialRampToValueAtTime",
+          "lineNumber": 127
+        },
+        {
+          "caller": "playBounce",
+          "callee": "osc.connect",
+          "lineNumber": 129
+        },
+        {
+          "caller": "playBounce",
+          "callee": "gain.connect",
+          "lineNumber": 130
+        },
+        {
+          "caller": "playBounce",
+          "callee": "osc.start",
+          "lineNumber": 131
+        },
+        {
+          "caller": "playBounce",
+          "callee": "osc.stop",
+          "lineNumber": 132
+        },
+        {
+          "caller": "playGameOver",
+          "callee": "getAudioContext",
+          "lineNumber": 138
+        },
+        {
+          "caller": "playGameOver",
+          "callee": "ctx.createOscillator",
+          "lineNumber": 142
+        },
+        {
+          "caller": "playGameOver",
+          "callee": "ctx.createGain",
+          "lineNumber": 143
+        },
+        {
+          "caller": "playGameOver",
+          "callee": "osc.frequency.setValueAtTime",
+          "lineNumber": 146
+        },
+        {
+          "caller": "playGameOver",
+          "callee": "osc.frequency.exponentialRampToValueAtTime",
+          "lineNumber": 147
+        },
+        {
+          "caller": "playGameOver",
+          "callee": "gain.gain.setValueAtTime",
+          "lineNumber": 149
+        },
+        {
+          "caller": "playGameOver",
+          "callee": "gain.gain.exponentialRampToValueAtTime",
+          "lineNumber": 150
+        },
+        {
+          "caller": "playGameOver",
+          "callee": "osc.connect",
+          "lineNumber": 152
+        },
+        {
+          "caller": "playGameOver",
+          "callee": "gain.connect",
+          "lineNumber": 153
+        },
+        {
+          "caller": "playGameOver",
+          "callee": "osc.start",
+          "lineNumber": 154
+        },
+        {
+          "caller": "playGameOver",
+          "callee": "osc.stop",
+          "lineNumber": 155
+        },
+        {
+          "caller": "playWin",
+          "callee": "getAudioContext",
+          "lineNumber": 161
+        },
+        {
+          "caller": "playWin",
+          "callee": "notes.forEach",
+          "lineNumber": 165
+        },
+        {
+          "caller": "playWin",
+          "callee": "ctx.createOscillator",
+          "lineNumber": 166
+        },
+        {
+          "caller": "playWin",
+          "callee": "ctx.createGain",
+          "lineNumber": 167
+        },
+        {
+          "caller": "playWin",
+          "callee": "osc.frequency.setValueAtTime",
+          "lineNumber": 171
+        },
+        {
+          "caller": "playWin",
+          "callee": "gain.gain.setValueAtTime",
+          "lineNumber": 173
+        },
+        {
+          "caller": "playWin",
+          "callee": "gain.gain.exponentialRampToValueAtTime",
+          "lineNumber": 174
+        },
+        {
+          "caller": "playWin",
+          "callee": "osc.connect",
+          "lineNumber": 176
+        },
+        {
+          "caller": "playWin",
+          "callee": "gain.connect",
+          "lineNumber": 177
+        },
+        {
+          "caller": "playWin",
+          "callee": "osc.start",
+          "lineNumber": 178
+        },
+        {
+          "caller": "playWin",
+          "callee": "osc.stop",
+          "lineNumber": 179
+        },
+        {
+          "caller": "playSimonTone",
+          "callee": "getAudioContext",
+          "lineNumber": 186
+        },
+        {
+          "caller": "playSimonTone",
+          "callee": "ctx.createOscillator",
+          "lineNumber": 193
+        },
+        {
+          "caller": "playSimonTone",
+          "callee": "ctx.createGain",
+          "lineNumber": 194
+        },
+        {
+          "caller": "playSimonTone",
+          "callee": "osc.frequency.setValueAtTime",
+          "lineNumber": 197
+        },
+        {
+          "caller": "playSimonTone",
+          "callee": "gain.gain.setValueAtTime",
+          "lineNumber": 199
+        },
+        {
+          "caller": "playSimonTone",
+          "callee": "gain.gain.exponentialRampToValueAtTime",
+          "lineNumber": 200
+        },
+        {
+          "caller": "playSimonTone",
+          "callee": "osc.connect",
+          "lineNumber": 202
+        },
+        {
+          "caller": "playSimonTone",
+          "callee": "gain.connect",
+          "lineNumber": 203
+        },
+        {
+          "caller": "playSimonTone",
+          "callee": "osc.start",
+          "lineNumber": 204
+        },
+        {
+          "caller": "playSimonTone",
+          "callee": "osc.stop",
+          "lineNumber": 205
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

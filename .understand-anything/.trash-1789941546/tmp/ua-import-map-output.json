@@ -1,0 +1,77 @@
+{
+  "scriptCompleted": true,
+  "stats": {
+    "filesScanned": 24,
+    "filesWithImports": 14,
+    "totalEdges": 29
+  },
+  "importMap": {
+    ".env.example": [],
+    ".understand-anything/.understandignore": [],
+    "index.html": [],
+    "metadata.json": [],
+    "package.json": [],
+    "src/App.tsx": [
+      "src/components/GameCard.tsx",
+      "src/components/GameViewer.tsx",
+      "src/components/Header.tsx",
+      "src/components/StatsModal.tsx",
+      "src/data/gamesData.ts",
+      "src/types.ts",
+      "src/utils/storage.ts"
+    ],
+    "src/components/GameCard.tsx": [
+      "src/types.ts"
+    ],
+    "src/components/games/BreakoutGame.tsx": [
+      "src/utils/audio.ts"
+    ],
+    "src/components/games/FlappyGame.tsx": [
+      "src/utils/audio.ts"
+    ],
+    "src/components/games/Game2048.tsx": [
+      "src/utils/audio.ts"
+    ],
+    "src/components/games/MinesweeperGame.tsx": [
+      "src/utils/audio.ts"
+    ],
+    "src/components/games/SimonGame.tsx": [
+      "src/utils/audio.ts"
+    ],
+    "src/components/games/SnakeGame.tsx": [
+      "src/utils/audio.ts"
+    ],
+    "src/components/GameViewer.tsx": [
+      "src/components/games/BreakoutGame.tsx",
+      "src/components/games/FlappyGame.tsx",
+      "src/components/games/Game2048.tsx",
+      "src/components/games/MinesweeperGame.tsx",
+      "src/components/games/SimonGame.tsx",
+      "src/components/games/SnakeGame.tsx",
+      "src/data/gamesData.ts",
+      "src/types.ts"
+    ],
+    "src/components/Header.tsx": [
+      "src/types.ts"
+    ],
+    "src/components/StatsModal.tsx": [
+      "src/data/gamesData.ts",
+      "src/types.ts"
+    ],
+    "src/data/gamesData.ts": [
+      "src/types.ts"
+    ],
+    "src/index.css": [],
+    "src/main.tsx": [
+      "src/App.tsx",
+      "src/index.css"
+    ],
+    "src/types.ts": [],
+    "src/utils/audio.ts": [],
+    "src/utils/storage.ts": [
+      "src/types.ts"
+    ],
+    "tsconfig.json": [],
+    "vite.config.ts": []
+  }
+}

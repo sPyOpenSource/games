@@ -1,0 +1,912 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "2c3a89513061ee92a00e35410d3ff4782f4ba34f",
+  "generatedAt": "2026-09-20T21:58:59.024Z",
+  "files": {
+    ".env.example": {
+      "filePath": ".env.example",
+      "contentHash": "b6d12c728de0aac8b0bc6239e53aa8088c1431bcb4f9a3d61e5e8a2df1c7c400",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": true
+    },
+    ".understand-anything/.understandignore": {
+      "filePath": ".understand-anything/.understandignore",
+      "contentHash": "625f44cad16cb5d15061f0a450baf234c6828a23638fd765718b38bd3841a7bc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 35,
+      "hasStructuralAnalysis": false
+    },
+    "index.html": {
+      "filePath": "index.html",
+      "contentHash": "cb1980250523bb499336d02ce118175162d7c9b1f25707dec9883144568094ec",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 19,
+      "hasStructuralAnalysis": false
+    },
+    "metadata.json": {
+      "filePath": "metadata.json",
+      "contentHash": "340df503772ace7626d5b997d50f1562cbfe1de5d44d150e7713002b4527fb4a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "package.json": {
+      "filePath": "package.json",
+      "contentHash": "034d9d57f4d770f6bba99df4ddd1ca24282400065e9a97c3f26bcae6a3b5923c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": true
+    },
+    "src/App.tsx": {
+      "filePath": "src/App.tsx",
+      "contentHash": "9c6389b5bd4ce7e14d87118e8f16c956a30e481847ea5fe750e19f74b6249064",
+      "functions": [
+        {
+          "name": "App",
+          "params": [],
+          "exported": true,
+          "lineCount": 400
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useState",
+            "useEffect",
+            "useMemo"
+          ]
+        },
+        {
+          "source": "./types",
+          "specifiers": [
+            "GameCategory",
+            "GameId",
+            "UserStats"
+          ]
+        },
+        {
+          "source": "./data/gamesData",
+          "specifiers": [
+            "GAMES_DATA"
+          ]
+        },
+        {
+          "source": "./utils/storage",
+          "specifiers": [
+            "loadUserStats",
+            "saveUserStats",
+            "recordGamePlay",
+            "toggleFavorite"
+          ]
+        },
+        {
+          "source": "./components/Header",
+          "specifiers": [
+            "Header"
+          ]
+        },
+        {
+          "source": "./components/GameCard",
+          "specifiers": [
+            "GameCard"
+          ]
+        },
+        {
+          "source": "./components/StatsModal",
+          "specifiers": [
+            "StatsModal"
+          ]
+        },
+        {
+          "source": "./components/GameViewer",
+          "specifiers": [
+            "GameViewer"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "Search",
+            "Flame",
+            "Sparkles",
+            "Heart",
+            "Dices",
+            "Award"
+          ]
+        },
+        {
+          "source": "canvas-confetti",
+          "specifiers": [
+            "confetti"
+          ]
+        }
+      ],
+      "exports": [
+        "App"
+      ],
+      "totalLines": 412,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/GameCard.tsx": {
+      "filePath": "src/components/GameCard.tsx",
+      "contentHash": "ddaa5e449f33893c680e766506a0404258afc087d4bd790af54495dc356c3bb9",
+      "functions": [
+        {
+          "name": "GameCard",
+          "params": [
+            "{\n  game,\n  stats,\n  onSelectGame,\n  onToggleFavorite,\n}"
+          ],
+          "exported": true,
+          "lineCount": 121
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        },
+        {
+          "source": "../types",
+          "specifiers": [
+            "GameInfo",
+            "UserStats"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "Play",
+            "Trophy",
+            "Heart"
+          ]
+        }
+      ],
+      "exports": [
+        "GameCard"
+      ],
+      "totalLines": 133,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/games/BreakoutGame.tsx": {
+      "filePath": "src/components/games/BreakoutGame.tsx",
+      "contentHash": "1113d561ab8f4e055ca24afe74d2841fd6a755dd1d31ee4a0c88398f97d318da",
+      "functions": [
+        {
+          "name": "BreakoutGame",
+          "params": [
+            "{ soundEnabled, onGameOver, highScore }"
+          ],
+          "exported": true,
+          "lineCount": 707
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect",
+            "useRef",
+            "useCallback"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "RotateCcw",
+            "Play",
+            "Pause",
+            "Trophy",
+            "Heart",
+            "Sparkles",
+            "ArrowLeft",
+            "ArrowRight"
+          ]
+        },
+        {
+          "source": "canvas-confetti",
+          "specifiers": [
+            "confetti"
+          ]
+        },
+        {
+          "source": "../../utils/audio",
+          "specifiers": [
+            "SoundEffects"
+          ]
+        }
+      ],
+      "exports": [
+        "BreakoutGame"
+      ],
+      "totalLines": 767,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/games/FlappyGame.tsx": {
+      "filePath": "src/components/games/FlappyGame.tsx",
+      "contentHash": "50f407ad699201f8914abcf517cd181043842a6aae97ec5d16a5f6fff740b691",
+      "functions": [
+        {
+          "name": "FlappyGame",
+          "params": [
+            "{ soundEnabled, onGameOver, highScore }"
+          ],
+          "exported": true,
+          "lineCount": 444
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect",
+            "useRef",
+            "useCallback"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "RotateCcw",
+            "Play",
+            "Trophy",
+            "Rocket",
+            "Medal"
+          ]
+        },
+        {
+          "source": "canvas-confetti",
+          "specifiers": [
+            "confetti"
+          ]
+        },
+        {
+          "source": "../../utils/audio",
+          "specifiers": [
+            "SoundEffects"
+          ]
+        }
+      ],
+      "exports": [
+        "FlappyGame"
+      ],
+      "totalLines": 480,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/games/Game2048.tsx": {
+      "filePath": "src/components/games/Game2048.tsx",
+      "contentHash": "7dccf251f42b7f5b9f67dea393bbc3a912330c195778f11c0d0ec821f5cfd764",
+      "functions": [
+        {
+          "name": "Game2048",
+          "params": [
+            "{ soundEnabled, onGameOver, highScore }"
+          ],
+          "exported": true,
+          "lineCount": 463
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect",
+            "useCallback",
+            "useRef"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "RotateCcw",
+            "Undo2",
+            "Trophy",
+            "ArrowUp",
+            "ArrowDown",
+            "ArrowLeft",
+            "ArrowRight"
+          ]
+        },
+        {
+          "source": "canvas-confetti",
+          "specifiers": [
+            "confetti"
+          ]
+        },
+        {
+          "source": "../../utils/audio",
+          "specifiers": [
+            "SoundEffects"
+          ]
+        }
+      ],
+      "exports": [
+        "Game2048"
+      ],
+      "totalLines": 477,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/games/MinesweeperGame.tsx": {
+      "filePath": "src/components/games/MinesweeperGame.tsx",
+      "contentHash": "cfcab9d037b9395cc96896cb24c974b1660ba5b0b38995060c4799377f7e3e69",
+      "functions": [
+        {
+          "name": "MinesweeperGame",
+          "params": [
+            "{\n  soundEnabled,\n  onGameOver,\n  highScore,\n}"
+          ],
+          "exported": true,
+          "lineCount": 408
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect",
+            "useCallback",
+            "useRef"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "RotateCcw",
+            "Flag",
+            "Bomb",
+            "Trophy",
+            "Clock",
+            "Lightbulb"
+          ]
+        },
+        {
+          "source": "canvas-confetti",
+          "specifiers": [
+            "confetti"
+          ]
+        },
+        {
+          "source": "../../utils/audio",
+          "specifiers": [
+            "SoundEffects"
+          ]
+        }
+      ],
+      "exports": [
+        "MinesweeperGame"
+      ],
+      "totalLines": 437,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/games/SimonGame.tsx": {
+      "filePath": "src/components/games/SimonGame.tsx",
+      "contentHash": "b46dfc86257b161e9adae412dbc87c613e80aedc0ff63271a4f2be5ebf2ed1ff",
+      "functions": [
+        {
+          "name": "SimonGame",
+          "params": [
+            "{ soundEnabled, onGameOver, highScore }"
+          ],
+          "exported": true,
+          "lineCount": 254
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect",
+            "useRef",
+            "useCallback"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "RotateCcw",
+            "Play",
+            "Trophy",
+            "Music",
+            "Volume2"
+          ]
+        },
+        {
+          "source": "canvas-confetti",
+          "specifiers": [
+            "confetti"
+          ]
+        },
+        {
+          "source": "../../utils/audio",
+          "specifiers": [
+            "SoundEffects"
+          ]
+        }
+      ],
+      "exports": [
+        "SimonGame"
+      ],
+      "totalLines": 273,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/games/SnakeGame.tsx": {
+      "filePath": "src/components/games/SnakeGame.tsx",
+      "contentHash": "452f8820f2f465d2434ed99d061aff32d4a8e0b983a052638288d58a6ea96b3d",
+      "functions": [
+        {
+          "name": "SnakeGame",
+          "params": [
+            "{ soundEnabled, onGameOver, highScore }"
+          ],
+          "exported": true,
+          "lineCount": 562
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect",
+            "useRef",
+            "useCallback"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "RotateCcw",
+            "Play",
+            "Pause",
+            "Trophy",
+            "ArrowUp",
+            "ArrowDown",
+            "ArrowLeft",
+            "ArrowRight",
+            "Shield"
+          ]
+        },
+        {
+          "source": "canvas-confetti",
+          "specifiers": [
+            "confetti"
+          ]
+        },
+        {
+          "source": "../../utils/audio",
+          "specifiers": [
+            "SoundEffects"
+          ]
+        }
+      ],
+      "exports": [
+        "SnakeGame"
+      ],
+      "totalLines": 590,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/GameViewer.tsx": {
+      "filePath": "src/components/GameViewer.tsx",
+      "contentHash": "443111afa9dec5e5a89f81c38653de4ea8332d90c1a981223925592b6dc71b5a",
+      "functions": [
+        {
+          "name": "GameViewer",
+          "params": [
+            "{\n  game,\n  stats,\n  onBack,\n  onSelectGame,\n  onGameOver,\n  onToggleSound,\n}"
+          ],
+          "exported": true,
+          "lineCount": 262
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState"
+          ]
+        },
+        {
+          "source": "../types",
+          "specifiers": [
+            "GameId",
+            "GameInfo",
+            "UserStats"
+          ]
+        },
+        {
+          "source": "../data/gamesData",
+          "specifiers": [
+            "GAMES_DATA"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "ArrowLeft",
+            "Maximize2",
+            "Minimize2",
+            "HelpCircle",
+            "Volume2",
+            "VolumeX",
+            "ChevronDown"
+          ]
+        },
+        {
+          "source": "./games/SnakeGame",
+          "specifiers": [
+            "SnakeGame"
+          ]
+        },
+        {
+          "source": "./games/Game2048",
+          "specifiers": [
+            "Game2048"
+          ]
+        },
+        {
+          "source": "./games/BreakoutGame",
+          "specifiers": [
+            "BreakoutGame"
+          ]
+        },
+        {
+          "source": "./games/FlappyGame",
+          "specifiers": [
+            "FlappyGame"
+          ]
+        },
+        {
+          "source": "./games/MinesweeperGame",
+          "specifiers": [
+            "MinesweeperGame"
+          ]
+        },
+        {
+          "source": "./games/SimonGame",
+          "specifiers": [
+            "SimonGame"
+          ]
+        }
+      ],
+      "exports": [
+        "GameViewer"
+      ],
+      "totalLines": 283,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/Header.tsx": {
+      "filePath": "src/components/Header.tsx",
+      "contentHash": "0f5703798209a898edaa49beae3d36ff9ad9bb333adf2bb9a6cb7647e0f470ab",
+      "functions": [
+        {
+          "name": "Header",
+          "params": [
+            "{\n  stats,\n  onToggleSound,\n  onOpenStats,\n  onRandomGame,\n  onGoHome,\n}"
+          ],
+          "exported": true,
+          "lineCount": 81
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "Gamepad2",
+            "Volume2",
+            "VolumeX",
+            "Trophy",
+            "Dices"
+          ]
+        },
+        {
+          "source": "../types",
+          "specifiers": [
+            "UserStats"
+          ]
+        }
+      ],
+      "exports": [
+        "Header"
+      ],
+      "totalLines": 94,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/StatsModal.tsx": {
+      "filePath": "src/components/StatsModal.tsx",
+      "contentHash": "484d30dfd3cbb9c567de8a47437afec982553706be7dbe40d8c96a6c75f04f69",
+      "functions": [
+        {
+          "name": "StatsModal",
+          "params": [
+            "{\n  stats,\n  isOpen,\n  onClose,\n  onResetStats,\n}"
+          ],
+          "exported": true,
+          "lineCount": 209
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        },
+        {
+          "source": "../types",
+          "specifiers": [
+            "UserStats"
+          ]
+        },
+        {
+          "source": "../data/gamesData",
+          "specifiers": [
+            "ACHIEVEMENTS_LIST",
+            "GAMES_DATA"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "X",
+            "Trophy",
+            "Award",
+            "Gamepad2",
+            "CheckCircle2",
+            "Circle",
+            "Flame"
+          ]
+        }
+      ],
+      "exports": [
+        "StatsModal"
+      ],
+      "totalLines": 222,
+      "hasStructuralAnalysis": true
+    },
+    "src/data/gamesData.ts": {
+      "filePath": "src/data/gamesData.ts",
+      "contentHash": "c7383c560404d0f6065e71aba1390b69e1bac435c825a3776ca6fd308f5bc502",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../types",
+          "specifiers": [
+            "GameInfo",
+            "Achievement"
+          ]
+        }
+      ],
+      "exports": [
+        "GAMES_DATA",
+        "ACHIEVEMENTS_LIST"
+      ],
+      "totalLines": 267,
+      "hasStructuralAnalysis": true
+    },
+    "src/index.css": {
+      "filePath": "src/index.css",
+      "contentHash": "42070e0b45bb201b2b838a52aaaa6e965f964e0b542d97f1fe517fe59c4b75a8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "src/main.tsx": {
+      "filePath": "src/main.tsx",
+      "contentHash": "5580d48b0fec68698a113d45a640b88d479dc35eb1f4b87c51f67c6cc81cee9b",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "StrictMode"
+          ]
+        },
+        {
+          "source": "react-dom/client",
+          "specifiers": [
+            "createRoot"
+          ]
+        },
+        {
+          "source": "./App.tsx",
+          "specifiers": [
+            "App"
+          ]
+        },
+        {
+          "source": "./index.css",
+          "specifiers": []
+        }
+      ],
+      "exports": [],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "src/types.ts": {
+      "filePath": "src/types.ts",
+      "contentHash": "3bab5d4b6f988aab3c863eec1813ed377e15ea322f8a2e29c1bac7842da31c26",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 48,
+      "hasStructuralAnalysis": true
+    },
+    "src/utils/audio.ts": {
+      "filePath": "src/utils/audio.ts",
+      "contentHash": "b499434bd38be5620a5772ffe92be92319e79435efb4393af5fdc45c3cfdf0dc",
+      "functions": [
+        {
+          "name": "getAudioContext",
+          "params": [],
+          "returnType": "AudioContext | null",
+          "exported": false,
+          "lineCount": 13
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "SoundEffects"
+      ],
+      "totalLines": 208,
+      "hasStructuralAnalysis": true
+    },
+    "src/utils/storage.ts": {
+      "filePath": "src/utils/storage.ts",
+      "contentHash": "0d603739a97a260680ef4488f9ca04b507e9dab4e5696c2ec40083488f368082",
+      "functions": [
+        {
+          "name": "loadUserStats",
+          "params": [],
+          "returnType": "UserStats",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "saveUserStats",
+          "params": [
+            "stats"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "recordGamePlay",
+          "params": [
+            "gameId",
+            "score"
+          ],
+          "returnType": "{ isNewHighScore: boolean; stats: UserStats }",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "toggleFavorite",
+          "params": [
+            "gameId"
+          ],
+          "returnType": "UserStats",
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../types",
+          "specifiers": [
+            "GameId",
+            "UserStats"
+          ]
+        }
+      ],
+      "exports": [
+        "loadUserStats",
+        "saveUserStats",
+        "recordGamePlay",
+        "toggleFavorite"
+      ],
+      "totalLines": 102,
+      "hasStructuralAnalysis": true
+    },
+    "tsconfig.json": {
+      "filePath": "tsconfig.json",
+      "contentHash": "6624845b5855cb0c547da44d56785371aaf4f77920440f93b685484456952468",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "vite.config.ts": {
+      "filePath": "vite.config.ts",
+      "contentHash": "c7b7cc4b3a6b6a08f0a4fb916bb4d4e41804d5767611bce43d4c1ad53a198192",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tailwindcss/vite",
+          "specifiers": [
+            "tailwindcss"
+          ]
+        },
+        {
+          "source": "@vitejs/plugin-react",
+          "specifiers": [
+            "react"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "path"
+          ]
+        },
+        {
+          "source": "vite",
+          "specifiers": [
+            "defineConfig"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 23,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

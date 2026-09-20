@@ -1,0 +1,739 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 8,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/App.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 411,
+      "nonEmptyLines": 382,
+      "functions": [
+        {
+          "name": "App",
+          "startLine": 12,
+          "endLine": 411,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "App",
+          "line": 12,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 13
+        },
+        {
+          "caller": "App",
+          "callee": "loadUserStats",
+          "lineNumber": 13
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 14
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 15
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 16
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 17
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 18
+        },
+        {
+          "caller": "updateStats",
+          "callee": "setStats",
+          "lineNumber": 22
+        },
+        {
+          "caller": "updateStats",
+          "callee": "saveUserStats",
+          "lineNumber": 23
+        },
+        {
+          "caller": "handleToggleSound",
+          "callee": "updateStats",
+          "lineNumber": 27
+        },
+        {
+          "caller": "handleToggleFavorite",
+          "callee": "toggleFavorite",
+          "lineNumber": 34
+        },
+        {
+          "caller": "handleToggleFavorite",
+          "callee": "setStats",
+          "lineNumber": 35
+        },
+        {
+          "caller": "handleGameOver",
+          "callee": "recordGamePlay",
+          "lineNumber": 39
+        },
+        {
+          "caller": "handleGameOver",
+          "callee": "setStats",
+          "lineNumber": 40
+        },
+        {
+          "caller": "handleGameOver",
+          "callee": "confetti",
+          "lineNumber": 43
+        },
+        {
+          "caller": "handleRandomGame",
+          "callee": "Math.floor",
+          "lineNumber": 52
+        },
+        {
+          "caller": "handleRandomGame",
+          "callee": "Math.random",
+          "lineNumber": 52
+        },
+        {
+          "caller": "handleRandomGame",
+          "callee": "setActiveGameId",
+          "lineNumber": 53
+        },
+        {
+          "caller": "handleResetStats",
+          "callee": "updateStats",
+          "lineNumber": 88
+        },
+        {
+          "caller": "App",
+          "callee": "useEffect",
+          "lineNumber": 92
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "setActiveGameId",
+          "lineNumber": 95
+        },
+        {
+          "caller": "App",
+          "callee": "window.addEventListener",
+          "lineNumber": 98
+        },
+        {
+          "caller": "App",
+          "callee": "window.removeEventListener",
+          "lineNumber": 99
+        },
+        {
+          "caller": "App",
+          "callee": "useMemo",
+          "lineNumber": 103
+        },
+        {
+          "caller": "App",
+          "callee": "GAMES_DATA.filter((game) => {\n      // Category filter\n      if (selectedCategory === 'favorites') {\n        if (!stats.favorites.includes(game.id)) return false;\n      } else if (selectedCategory !== 'all') {\n        if (game.category !== selectedCategory) return false;\n      }\n\n      // Search query\n      if (searchQuery.trim()) {\n        const q = searchQuery.toLowerCase();\n        const matchTitle = game.title.toLowerCase().includes(q);\n        const matchDesc = game.description.toLowerCase().includes(q);\n        const matchTags = game.tags.some((t) => t.toLowerCase().includes(q));\n        if (!matchTitle && !matchDesc && !matchTags) return false;\n      }\n\n      return true;\n    }).sort",
+          "lineNumber": 104
+        },
+        {
+          "caller": "App",
+          "callee": "GAMES_DATA.filter",
+          "lineNumber": 104
+        },
+        {
+          "caller": "App",
+          "callee": "stats.favorites.includes",
+          "lineNumber": 107
+        },
+        {
+          "caller": "App",
+          "callee": "searchQuery.trim",
+          "lineNumber": 113
+        },
+        {
+          "caller": "App",
+          "callee": "searchQuery.toLowerCase",
+          "lineNumber": 114
+        },
+        {
+          "caller": "App",
+          "callee": "game.title.toLowerCase().includes",
+          "lineNumber": 115
+        },
+        {
+          "caller": "App",
+          "callee": "game.title.toLowerCase",
+          "lineNumber": 115
+        },
+        {
+          "caller": "App",
+          "callee": "game.description.toLowerCase().includes",
+          "lineNumber": 116
+        },
+        {
+          "caller": "App",
+          "callee": "game.description.toLowerCase",
+          "lineNumber": 116
+        },
+        {
+          "caller": "App",
+          "callee": "game.tags.some",
+          "lineNumber": 117
+        },
+        {
+          "caller": "App",
+          "callee": "t.toLowerCase().includes",
+          "lineNumber": 117
+        },
+        {
+          "caller": "App",
+          "callee": "t.toLowerCase",
+          "lineNumber": 117
+        },
+        {
+          "caller": "App",
+          "callee": "a.title.localeCompare",
+          "lineNumber": 129
+        },
+        {
+          "caller": "App",
+          "callee": "useMemo",
+          "lineNumber": 134
+        },
+        {
+          "caller": "App",
+          "callee": "GAMES_DATA.find",
+          "lineNumber": 137
+        },
+        {
+          "caller": "App",
+          "callee": "GAMES_DATA.find",
+          "lineNumber": 145
+        },
+        {
+          "caller": "App",
+          "callee": "setActiveGameId",
+          "lineNumber": 150
+        },
+        {
+          "caller": "App",
+          "callee": "setActiveGameId",
+          "lineNumber": 151
+        },
+        {
+          "caller": "App",
+          "callee": "setIsStatsOpen",
+          "lineNumber": 165
+        },
+        {
+          "caller": "App",
+          "callee": "setSelectedCategory",
+          "lineNumber": 168
+        },
+        {
+          "caller": "App",
+          "callee": "setSearchQuery",
+          "lineNumber": 169
+        },
+        {
+          "caller": "App",
+          "callee": "featuredGame.category.toUpperCase",
+          "lineNumber": 197
+        },
+        {
+          "caller": "App",
+          "callee": "setActiveGameId",
+          "lineNumber": 207
+        },
+        {
+          "caller": "App",
+          "callee": "setActiveGameId",
+          "lineNumber": 223
+        },
+        {
+          "caller": "App",
+          "callee": "Object.values(stats.plays).reduce",
+          "lineNumber": 260
+        },
+        {
+          "caller": "App",
+          "callee": "Object.values",
+          "lineNumber": 260
+        },
+        {
+          "caller": "App",
+          "callee": "Math.max",
+          "lineNumber": 272
+        },
+        {
+          "caller": "App",
+          "callee": "Object.values",
+          "lineNumber": 272
+        },
+        {
+          "caller": "App",
+          "callee": "[\n              { id: 'all', label: 'All Games' },\n              { id: 'arcade', label: 'Arcade' },\n              { id: 'puzzle', label: 'Puzzle' },\n              { id: 'action', label: 'Action' },\n              { id: 'classic', label: 'Classic' },\n              { id: 'board', label: 'Board' },\n              { id: 'favorites', label: 'Favorites' },\n            ].map",
+          "lineNumber": 294
+        },
+        {
+          "caller": "App",
+          "callee": "setSelectedCategory",
+          "lineNumber": 307
+        },
+        {
+          "caller": "App",
+          "callee": "setSearchQuery",
+          "lineNumber": 333
+        },
+        {
+          "caller": "App",
+          "callee": "setSortBy",
+          "lineNumber": 341
+        },
+        {
+          "caller": "App",
+          "callee": "filteredGames.map",
+          "lineNumber": 354
+        },
+        {
+          "caller": "App",
+          "callee": "setActiveGameId",
+          "lineNumber": 359
+        },
+        {
+          "caller": "App",
+          "callee": "setSelectedCategory",
+          "lineNumber": 375
+        },
+        {
+          "caller": "App",
+          "callee": "setSearchQuery",
+          "lineNumber": 376
+        },
+        {
+          "caller": "App",
+          "callee": "setIsStatsOpen",
+          "lineNumber": 406
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/GameCard.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 132,
+      "nonEmptyLines": 120,
+      "functions": [
+        {
+          "name": "GameCard",
+          "startLine": 12,
+          "endLine": 132,
+          "params": [
+            "{\n  game,\n  stats,\n  onSelectGame,\n  onToggleFavorite,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GameCard",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GameCard",
+          "callee": "stats.favorites.includes",
+          "lineNumber": 18
+        },
+        {
+          "caller": "GameCard",
+          "callee": "onSelectGame",
+          "lineNumber": 37
+        },
+        {
+          "caller": "GameCard",
+          "callee": "getDifficultyBadge",
+          "lineNumber": 54
+        },
+        {
+          "caller": "GameCard",
+          "callee": "e.stopPropagation",
+          "lineNumber": 60
+        },
+        {
+          "caller": "GameCard",
+          "callee": "onToggleFavorite",
+          "lineNumber": 61
+        },
+        {
+          "caller": "GameCard",
+          "callee": "onSelectGame",
+          "lineNumber": 86
+        },
+        {
+          "caller": "GameCard",
+          "callee": "game.tags.slice(0, 3).map",
+          "lineNumber": 103
+        },
+        {
+          "caller": "GameCard",
+          "callee": "game.tags.slice",
+          "lineNumber": 103
+        },
+        {
+          "caller": "GameCard",
+          "callee": "onSelectGame",
+          "lineNumber": 123
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/Header.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 93,
+      "nonEmptyLines": 87,
+      "functions": [
+        {
+          "name": "Header",
+          "startLine": 13,
+          "endLine": 93,
+          "params": [
+            "{\n  stats,\n  onToggleSound,\n  onOpenStats,\n  onRandomGame,\n  onGoHome,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Header",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Header",
+          "callee": "Object.values(stats.plays).reduce",
+          "lineNumber": 20
+        },
+        {
+          "caller": "Header",
+          "callee": "Object.values",
+          "lineNumber": 20
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/StatsModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 221,
+      "nonEmptyLines": 206,
+      "functions": [
+        {
+          "name": "StatsModal",
+          "startLine": 13,
+          "endLine": 221,
+          "params": [
+            "{\n  stats,\n  isOpen,\n  onClose,\n  onResetStats,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "StatsModal",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "StatsModal",
+          "callee": "Object.values(stats.plays).reduce",
+          "lineNumber": 21
+        },
+        {
+          "caller": "StatsModal",
+          "callee": "Object.values",
+          "lineNumber": 21
+        },
+        {
+          "caller": "StatsModal",
+          "callee": "Object.values(stats.highScores).reduce",
+          "lineNumber": 22
+        },
+        {
+          "caller": "StatsModal",
+          "callee": "Object.values",
+          "lineNumber": 22
+        },
+        {
+          "caller": "StatsModal",
+          "callee": "ACHIEVEMENTS_LIST.filter",
+          "lineNumber": 50
+        },
+        {
+          "caller": "StatsModal",
+          "callee": "isAchievementUnlocked",
+          "lineNumber": 50
+        },
+        {
+          "caller": "StatsModal",
+          "callee": "Math.round",
+          "lineNumber": 51
+        },
+        {
+          "caller": "StatsModal",
+          "callee": "GAMES_DATA.map",
+          "lineNumber": 124
+        },
+        {
+          "caller": "StatsModal",
+          "callee": "ACHIEVEMENTS_LIST.map",
+          "lineNumber": 160
+        },
+        {
+          "caller": "StatsModal",
+          "callee": "isAchievementUnlocked",
+          "lineNumber": 161
+        },
+        {
+          "caller": "StatsModal",
+          "callee": "confirm",
+          "lineNumber": 203
+        },
+        {
+          "caller": "StatsModal",
+          "callee": "onResetStats",
+          "lineNumber": 204
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/data/gamesData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 266,
+      "nonEmptyLines": 264,
+      "exports": [
+        {
+          "name": "GAMES_DATA",
+          "line": 3,
+          "isDefault": false
+        },
+        {
+          "name": "ACHIEVEMENTS_LIST",
+          "line": 256,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/main.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 9,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 47,
+      "nonEmptyLines": 43,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/utils/storage.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 101,
+      "nonEmptyLines": 93,
+      "functions": [
+        {
+          "name": "loadUserStats",
+          "startLine": 37,
+          "endLine": 57,
+          "params": []
+        },
+        {
+          "name": "saveUserStats",
+          "startLine": 59,
+          "endLine": 66,
+          "params": [
+            "stats"
+          ]
+        },
+        {
+          "name": "recordGamePlay",
+          "startLine": 68,
+          "endLine": 88,
+          "params": [
+            "gameId",
+            "score"
+          ]
+        },
+        {
+          "name": "toggleFavorite",
+          "startLine": 90,
+          "endLine": 101,
+          "params": [
+            "gameId"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "loadUserStats",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "saveUserStats",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "recordGamePlay",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "toggleFavorite",
+          "line": 90,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "loadUserStats",
+          "callee": "localStorage.getItem",
+          "lineNumber": 40
+        },
+        {
+          "caller": "loadUserStats",
+          "callee": "JSON.parse",
+          "lineNumber": 42
+        },
+        {
+          "caller": "loadUserStats",
+          "callee": "Array.isArray",
+          "lineNumber": 48
+        },
+        {
+          "caller": "loadUserStats",
+          "callee": "Array.isArray",
+          "lineNumber": 49
+        },
+        {
+          "caller": "saveUserStats",
+          "callee": "localStorage.setItem",
+          "lineNumber": 62
+        },
+        {
+          "caller": "saveUserStats",
+          "callee": "JSON.stringify",
+          "lineNumber": 62
+        },
+        {
+          "caller": "saveUserStats",
+          "callee": "console.error",
+          "lineNumber": 64
+        },
+        {
+          "caller": "recordGamePlay",
+          "callee": "loadUserStats",
+          "lineNumber": 69
+        },
+        {
+          "caller": "recordGamePlay",
+          "callee": "saveUserStats",
+          "lineNumber": 86
+        },
+        {
+          "caller": "toggleFavorite",
+          "callee": "loadUserStats",
+          "lineNumber": 91
+        },
+        {
+          "caller": "toggleFavorite",
+          "callee": "current.favorites.includes",
+          "lineNumber": 92
+        },
+        {
+          "caller": "toggleFavorite",
+          "callee": "current.favorites.filter",
+          "lineNumber": 96
+        },
+        {
+          "caller": "toggleFavorite",
+          "callee": "saveUserStats",
+          "lineNumber": 99
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "file:.understand-anything/.understandignore",
+      "type": "file",
+      "name": ".understandignore",
+      "filePath": ".understand-anything/.understandignore",
+      "summary": "Understand Anything ignore file defining patterns to exclude from codebase analysis, based on .gitignore patterns and test file conventions.",
+      "tags": ["configuration", "analysis-ignore", "tooling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/index.css",
+      "type": "file",
+      "name": "index.css",
+      "filePath": "src/index.css",
+      "summary": "Global CSS entry point importing Tailwind CSS v4 styles for the application.",
+      "tags": ["stylesheet", "tailwindcss", "entry-point", "global-styles"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:vite.config.ts",
+      "type": "config",
+      "name": "vite.config.ts",
+      "filePath": "vite.config.ts",
+      "summary": "Vite configuration enabling React plugin, Tailwind CSS plugin, and development server settings for the ArcadeSphere game collection.",
+      "tags": ["configuration", "vite", "build-system", "react", "tailwindcss"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:vite.config.ts",
+      "target": "file:src/main.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/index.css",
+      "target": "file:src/main.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

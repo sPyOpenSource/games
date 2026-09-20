@@ -1,0 +1,71 @@
+[
+  {
+    "order": 1,
+    "title": "Project Bootstrap",
+    "description": "The application starts at index.html which loads the Vite React app, and main.tsx bootstraps React by rendering the App component into the DOM root. The global stylesheet (index.css) imports Tailwind CSS v4 for styling.",
+    "nodeIds": ["file:index.html", "file:src/main.tsx", "file:src/index.css"]
+  },
+  {
+    "order": 2,
+    "title": "Application Root Component",
+    "description": "App.tsx is the main application component that manages all global state including the active game selection, user statistics, sound settings, favorites, search queries, and category filters. It coordinates the header, game catalog, game viewer, and stats modal.",
+    "nodeIds": ["file:src/App.tsx"],
+    "languageLesson": "React hooks (useState, useEffect, useMemo, useCallback) are used extensively for state management and performance optimization. The component uses a single state object pattern with multiple useState calls for different concerns."
+  },
+  {
+    "order": 3,
+    "title": "Core Types and Game Catalog",
+    "description": "The type system (types.ts) defines the domain model for games, user statistics, achievements, and categories. The gamesData.ts file contains the central catalog of all six games with their metadata, difficulty ratings, descriptions, tags, and achievement definitions.",
+    "nodeIds": ["file:src/types.ts", "file:src/data/gamesData.ts"],
+    "languageLesson": "TypeScript discriminated unions and branded types could be used to further strengthen the type safety of game IDs and category identifiers."
+  },
+  {
+    "order": 4,
+    "title": "Persistence Layer",
+    "description": "The storage.ts utility provides a localStorage persistence layer for user statistics including play counts, high scores, favorites, and achievement tracking. It handles serialization, deserialization, validation, and error recovery.",
+    "nodeIds": ["file:src/utils/storage.ts"]
+  },
+  {
+    "order": 5,
+    "title": "UI Components Overview",
+    "description": "The UI layer consists of reusable components: GameCard displays individual game metadata with difficulty badges and favorite toggles; Header shows total plays and provides navigation actions; StatsModal presents comprehensive statistics with achievement progress; GameViewer renders the active game and handles game switching.",
+    "nodeIds": ["file:src/components/GameCard.tsx", "file:src/components/Header.tsx", "file:src/components/StatsModal.tsx", "file:src/components/GameViewer.tsx"]
+  },
+  {
+    "order": 6,
+    "title": "Audio Utility",
+    "description": "The audio.ts module wraps the Web Audio API to generate procedural sound effects for all games including click, eat, jump, pop, bounce, game over, win, and Simon-specific tones. It uses a singleton AudioContext pattern with automatic resume handling for browser autoplay policies.",
+    "nodeIds": ["file:src/utils/audio.ts"],
+    "languageLesson": "Web Audio API uses an AudioContext with OscillatorNode and GainNode to synthesize sounds programmatically. The singleton pattern with context.resume() handles browser autoplay policies that require user interaction before audio can play."
+  },
+  {
+    "order": 7,
+    "title": "Game Implementations - Arcade Games",
+    "description": "BreakoutGame and FlappyGame are classic arcade-style games implemented with HTML5 Canvas. Breakout features paddle control, ball physics, power-ups, particles, and multi-level progression. Flappy Bird clone implements tap-to-jump mechanics, procedural pipe generation, collision detection, and a medal scoring system.",
+    "nodeIds": ["file:src/components/games/BreakoutGame.tsx", "file:src/components/games/FlappyGame.tsx"]
+  },
+  {
+    "order": 8,
+    "title": "Game Implementations - Puzzle & Strategy Games",
+    "description": "Game2048 implements the classic 2048 puzzle with tile merging, undo functionality, and animated rendering. MinesweeperGame provides configurable difficulty levels, timer, flag mode, hint system, and flood-fill reveal. SimonGame is a memory game with sequence playback, progressive difficulty, and audio tone generation.",
+    "nodeIds": ["file:src/components/games/Game2048.tsx", "file:src/components/games/MinesweeperGame.tsx", "file:src/components/games/SimonGame.tsx"]
+  },
+  {
+    "order": 9,
+    "title": "Game Implementation - Snake",
+    "description": "SnakeGame features directional control, food collection with combo scoring, portal mode (wrap-around walls), multiple speed levels, pause/resume functionality, touch controls, and smooth canvas rendering with trail effects.",
+    "nodeIds": ["file:src/components/games/SnakeGame.tsx"]
+  },
+  {
+    "order": 10,
+    "title": "Build Configuration",
+    "description": "The project uses Vite as the build tool with React plugin and Tailwind CSS v4 plugin. TypeScript is configured with strict mode, path aliases, and modern JSX transform. The environment template (.env.example) documents required API keys for Google Generative AI integration.",
+    "nodeIds": ["config:package.json", "config:vite.config.ts", "config:tsconfig.json", "config:.env.example"]
+  },
+  {
+    "order": 11,
+    "title": "Application Metadata",
+    "description": "The metadata.json manifest defines the ArcadeSphere game collection's name, description, frame permissions, and major capabilities including server-side Gemini API integration for potential AI features.",
+    "nodeIds": ["config:metadata.json"]
+  }
+]

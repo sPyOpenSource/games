@@ -1,0 +1,404 @@
+{
+  "scriptCompleted": true,
+  "directoryGroups": {
+    "App.tsx": [
+      "file:src/App.tsx"
+    ],
+    "components": [
+      "file:src/components/GameCard.tsx",
+      "file:src/components/Header.tsx",
+      "file:src/components/StatsModal.tsx",
+      "file:src/components/GameViewer.tsx",
+      "file:src/components/games/BreakoutGame.tsx",
+      "file:src/components/games/FlappyGame.tsx",
+      "file:src/components/games/Game2048.tsx",
+      "file:src/components/games/MinesweeperGame.tsx",
+      "file:src/components/games/SimonGame.tsx",
+      "file:src/components/games/SnakeGame.tsx"
+    ],
+    "data": [
+      "file:src/data/gamesData.ts"
+    ],
+    "main.tsx": [
+      "file:src/main.tsx"
+    ],
+    "types.ts": [
+      "file:src/types.ts"
+    ],
+    "utils": [
+      "file:src/utils/storage.ts",
+      "file:src/utils/audio.ts"
+    ],
+    ".env.example": [
+      "config:.env.example"
+    ],
+    "index.html": [
+      "file:index.html"
+    ],
+    "metadata.json": [
+      "config:metadata.json"
+    ],
+    "package.json": [
+      "config:package.json"
+    ],
+    "tsconfig.json": [
+      "config:tsconfig.json"
+    ],
+    ".understand-anything": [
+      "file:.understand-anything/.understandignore"
+    ],
+    "index.css": [
+      "file:src/index.css"
+    ],
+    "vite.config.ts": [
+      "config:vite.config.ts"
+    ]
+  },
+  "nodeTypeGroups": {
+    "file": [
+      "file:src/App.tsx",
+      "file:src/components/GameCard.tsx",
+      "file:src/components/Header.tsx",
+      "file:src/components/StatsModal.tsx",
+      "file:src/data/gamesData.ts",
+      "file:src/main.tsx",
+      "file:src/types.ts",
+      "file:src/utils/storage.ts",
+      "file:src/components/GameViewer.tsx",
+      "file:src/components/games/BreakoutGame.tsx",
+      "file:src/components/games/FlappyGame.tsx",
+      "file:src/components/games/Game2048.tsx",
+      "file:src/components/games/MinesweeperGame.tsx",
+      "file:src/components/games/SimonGame.tsx",
+      "file:src/components/games/SnakeGame.tsx",
+      "file:src/utils/audio.ts",
+      "file:index.html",
+      "file:.understand-anything/.understandignore",
+      "file:src/index.css"
+    ],
+    "config": [
+      "config:.env.example",
+      "config:metadata.json",
+      "config:package.json",
+      "config:tsconfig.json",
+      "config:vite.config.ts"
+    ]
+  },
+  "crossCategoryEdges": [
+    {
+      "fromType": "file",
+      "toType": "file",
+      "edgeType": "imports",
+      "count": 30
+    },
+    {
+      "fromType": "file",
+      "toType": "file",
+      "edgeType": "calls",
+      "count": 7
+    },
+    {
+      "fromType": "file",
+      "toType": "file",
+      "edgeType": "depends_on",
+      "count": 2
+    },
+    {
+      "fromType": "config",
+      "toType": "file",
+      "edgeType": "configures",
+      "count": 4
+    },
+    {
+      "fromType": "file",
+      "toType": "file",
+      "edgeType": "deploys",
+      "count": 1
+    }
+  ],
+  "interGroupImports": [
+    {
+      "from": "App.tsx",
+      "to": "components",
+      "count": 4
+    },
+    {
+      "from": "App.tsx",
+      "to": "data",
+      "count": 1
+    },
+    {
+      "from": "App.tsx",
+      "to": "types.ts",
+      "count": 1
+    },
+    {
+      "from": "App.tsx",
+      "to": "utils",
+      "count": 1
+    },
+    {
+      "from": "components",
+      "to": "types.ts",
+      "count": 4
+    },
+    {
+      "from": "components",
+      "to": "data",
+      "count": 2
+    },
+    {
+      "from": "data",
+      "to": "types.ts",
+      "count": 1
+    },
+    {
+      "from": "main.tsx",
+      "to": "App.tsx",
+      "count": 1
+    },
+    {
+      "from": "main.tsx",
+      "to": "index.css",
+      "count": 1
+    },
+    {
+      "from": "utils",
+      "to": "types.ts",
+      "count": 1
+    },
+    {
+      "from": "components",
+      "to": "utils",
+      "count": 6
+    }
+  ],
+  "intraGroupDensity": {
+    "App.tsx": {
+      "internalEdges": 0,
+      "totalEdges": 4,
+      "density": 0
+    },
+    "components": {
+      "internalEdges": 6,
+      "totalEdges": 14,
+      "density": 0.42857142857142855
+    },
+    "data": {
+      "internalEdges": 0,
+      "totalEdges": 2,
+      "density": 0
+    },
+    "main.tsx": {
+      "internalEdges": 0,
+      "totalEdges": 1,
+      "density": 0
+    },
+    "types.ts": {
+      "internalEdges": 0,
+      "totalEdges": 3,
+      "density": 0
+    },
+    "utils": {
+      "internalEdges": 0,
+      "totalEdges": 4,
+      "density": 0
+    },
+    ".env.example": {
+      "internalEdges": 0,
+      "totalEdges": 0,
+      "density": 0
+    },
+    "index.html": {
+      "internalEdges": 0,
+      "totalEdges": 0,
+      "density": 0
+    },
+    "metadata.json": {
+      "internalEdges": 0,
+      "totalEdges": 0,
+      "density": 0
+    },
+    "package.json": {
+      "internalEdges": 0,
+      "totalEdges": 0,
+      "density": 0
+    },
+    "tsconfig.json": {
+      "internalEdges": 0,
+      "totalEdges": 0,
+      "density": 0
+    },
+    ".understand-anything": {
+      "internalEdges": 0,
+      "totalEdges": 0,
+      "density": 0
+    },
+    "index.css": {
+      "internalEdges": 0,
+      "totalEdges": 0,
+      "density": 0
+    },
+    "vite.config.ts": {
+      "internalEdges": 0,
+      "totalEdges": 0,
+      "density": 0
+    }
+  },
+  "patternMatches": {
+    "components": "ui",
+    "data": "data",
+    "utils": "utility"
+  },
+  "deploymentTopology": {
+    "hasDockerfile": false,
+    "hasCompose": false,
+    "hasK8s": false,
+    "hasTerraform": false,
+    "hasCI": false,
+    "infraFiles": []
+  },
+  "dataPipeline": {
+    "schemaFiles": [],
+    "migrationFiles": [],
+    "dataModelFiles": [
+      "src/data/gamesData.ts",
+      "src/types.ts"
+    ],
+    "apiHandlerFiles": []
+  },
+  "docCoverage": {
+    "groupsWithDocs": 0,
+    "totalGroups": 14,
+    "coverageRatio": 0,
+    "undocumentedGroups": [
+      "App.tsx",
+      "components",
+      "data",
+      "main.tsx",
+      "types.ts",
+      "utils",
+      ".env.example",
+      "index.html",
+      "metadata.json",
+      "package.json",
+      "tsconfig.json",
+      ".understand-anything",
+      "index.css",
+      "vite.config.ts"
+    ]
+  },
+  "dependencyDirection": [
+    {
+      "dependent": "App.tsx",
+      "dependsOn": "components"
+    },
+    {
+      "dependent": "App.tsx",
+      "dependsOn": "data"
+    },
+    {
+      "dependent": "App.tsx",
+      "dependsOn": "types.ts"
+    },
+    {
+      "dependent": "App.tsx",
+      "dependsOn": "utils"
+    },
+    {
+      "dependent": "components",
+      "dependsOn": "types.ts"
+    },
+    {
+      "dependent": "components",
+      "dependsOn": "data"
+    },
+    {
+      "dependent": "data",
+      "dependsOn": "types.ts"
+    },
+    {
+      "dependent": "main.tsx",
+      "dependsOn": "App.tsx"
+    },
+    {
+      "dependent": "main.tsx",
+      "dependsOn": "index.css"
+    },
+    {
+      "dependent": "utils",
+      "dependsOn": "types.ts"
+    },
+    {
+      "dependent": "components",
+      "dependsOn": "utils"
+    }
+  ],
+  "fileStats": {
+    "totalFileNodes": 24,
+    "filesPerGroup": {
+      "App.tsx": 1,
+      "components": 10,
+      "data": 1,
+      "main.tsx": 1,
+      "types.ts": 1,
+      "utils": 2,
+      ".env.example": 1,
+      "index.html": 1,
+      "metadata.json": 1,
+      "package.json": 1,
+      "tsconfig.json": 1,
+      ".understand-anything": 1,
+      "index.css": 1,
+      "vite.config.ts": 1
+    },
+    "nodeTypeCounts": {
+      "file": 19,
+      "config": 5
+    }
+  },
+  "fileFanIn": {
+    "file:src/types.ts": 7,
+    "file:src/utils/audio.ts": 6,
+    "file:src/data/gamesData.ts": 3,
+    "file:src/App.tsx": 1,
+    "file:src/components/GameCard.tsx": 1,
+    "file:src/components/Header.tsx": 1,
+    "file:src/components/StatsModal.tsx": 1,
+    "file:src/utils/storage.ts": 1,
+    "file:src/components/GameViewer.tsx": 1,
+    "file:src/components/games/BreakoutGame.tsx": 1,
+    "file:src/components/games/FlappyGame.tsx": 1,
+    "file:src/components/games/Game2048.tsx": 1,
+    "file:src/components/games/MinesweeperGame.tsx": 1,
+    "file:src/components/games/SimonGame.tsx": 1,
+    "file:src/components/games/SnakeGame.tsx": 1,
+    "file:src/index.css": 1,
+    "file:src/main.tsx": 0,
+    "config:.env.example": 0,
+    "file:index.html": 0,
+    "config:metadata.json": 0
+  },
+  "fileFanOut": {
+    "file:src/components/GameViewer.tsx": 8,
+    "file:src/App.tsx": 7,
+    "file:src/components/StatsModal.tsx": 2,
+    "file:src/main.tsx": 2,
+    "file:src/components/GameCard.tsx": 1,
+    "file:src/components/Header.tsx": 1,
+    "file:src/data/gamesData.ts": 1,
+    "file:src/utils/storage.ts": 1,
+    "file:src/components/games/BreakoutGame.tsx": 1,
+    "file:src/components/games/FlappyGame.tsx": 1,
+    "file:src/components/games/Game2048.tsx": 1,
+    "file:src/components/games/MinesweeperGame.tsx": 1,
+    "file:src/components/games/SimonGame.tsx": 1,
+    "file:src/components/games/SnakeGame.tsx": 1,
+    "file:src/types.ts": 0,
+    "file:src/utils/audio.ts": 0,
+    "config:.env.example": 0,
+    "file:index.html": 0,
+    "config:metadata.json": 0,
+    "config:package.json": 0
+  }
+}

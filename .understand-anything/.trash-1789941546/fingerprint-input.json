@@ -1,0 +1,30 @@
+{
+  "projectRoot": "/Users/xuyi/Source/JavaScript/games",
+  "sourceFilePaths": [
+    ".env.example",
+    ".understand-anything/.understandignore",
+    "index.html",
+    "metadata.json",
+    "package.json",
+    "src/App.tsx",
+    "src/components/GameCard.tsx",
+    "src/components/games/BreakoutGame.tsx",
+    "src/components/games/FlappyGame.tsx",
+    "src/components/games/Game2048.tsx",
+    "src/components/games/MinesweeperGame.tsx",
+    "src/components/games/SimonGame.tsx",
+    "src/components/games/SnakeGame.tsx",
+    "src/components/GameViewer.tsx",
+    "src/components/Header.tsx",
+    "src/components/StatsModal.tsx",
+    "src/data/gamesData.ts",
+    "src/index.css",
+    "src/main.tsx",
+    "src/types.ts",
+    "src/utils/audio.ts",
+    "src/utils/storage.ts",
+    "tsconfig.json",
+    "vite.config.ts"
+  ],
+  "gitCommitHash": "2c3a89513061ee92a00e35410d3ff4782f4ba34f"
+}

@@ -1,0 +1,1093 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "ArcadeSphere - Web Game Collection",
+    "languages": ["config", "css", "html", "json", "typescript", "unknown"],
+    "frameworks": ["React", "Vite", "Tailwind CSS", "Express", "Motion", "Lucide React", "Canvas Confetti", "Google GenAI"],
+    "description": "An arcade collection of retro and puzzle web games including Cyber Snake, 2048 Fusion, Brick Breaker DX, Flappy Aviator, Minesweeper Quest, and Simon Blitz with local high scores and sound effects.",
+    "analyzedAt": "2026-09-20T23:30:00.000Z",
+    "gitCommitHash": "2c3a89513061ee92a00e35410d3ff4782f4ba34f"
+  },
+  "nodes": [
+    {
+      "id": "file:src/App.tsx",
+      "type": "file",
+      "name": "App.tsx",
+      "filePath": "src/App.tsx",
+      "summary": "Main application component managing game selection, state, and rendering. Handles user interactions, favorites, statistics tracking, and coordinates the game viewer with the game catalog.",
+      "tags": ["entry-point", "component", "state-management", "game-catalog"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/App.tsx:App",
+      "type": "function",
+      "name": "App",
+      "filePath": "src/App.tsx",
+      "lineRange": [12, 411],
+      "summary": "Root React component that manages all application state including active game, user stats, sound settings, favorites, search, and category filters.",
+      "tags": ["component", "state-management", "hook-heavy"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/GameCard.tsx",
+      "type": "file",
+      "name": "GameCard.tsx",
+      "filePath": "src/components/GameCard.tsx",
+      "summary": "Reusable game card component displaying game metadata, difficulty, favorite status, and handling selection and favorite toggle interactions.",
+      "tags": ["component", "ui", "game-catalog"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/GameCard.tsx:GameCard",
+      "type": "function",
+      "name": "GameCard",
+      "filePath": "src/components/GameCard.tsx",
+      "lineRange": [12, 132],
+      "summary": "Renders a single game card with title, description, difficulty badge, tags, and favorite/play action buttons.",
+      "tags": ["component", "ui", "interaction"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/Header.tsx",
+      "type": "file",
+      "name": "Header.tsx",
+      "filePath": "src/components/Header.tsx",
+      "summary": "Header component showing total plays, sound toggle, stats modal trigger, random game button, and home navigation.",
+      "tags": ["component", "ui", "navigation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/Header.tsx:Header",
+      "type": "function",
+      "name": "Header",
+      "filePath": "src/components/Header.tsx",
+      "lineRange": [13, 93],
+      "summary": "Renders the top navigation bar with game statistics, sound control, and action buttons.",
+      "tags": ["component", "ui", "navigation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/StatsModal.tsx",
+      "type": "file",
+      "name": "StatsModal.tsx",
+      "filePath": "src/components/StatsModal.tsx",
+      "summary": "Modal dialog displaying comprehensive game statistics including total plays, high scores, achievements progress, and per-game breakdown with reset functionality.",
+      "tags": ["component", "ui", "modal", "statistics"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/StatsModal.tsx:StatsModal",
+      "type": "function",
+      "name": "StatsModal",
+      "filePath": "src/components/StatsModal.tsx",
+      "lineRange": [13, 221],
+      "summary": "Renders the statistics modal with aggregated stats, achievement tracking, and per-game play history.",
+      "tags": ["component", "ui", "modal", "statistics"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/data/gamesData.ts",
+      "type": "file",
+      "name": "gamesData.ts",
+      "filePath": "src/data/gamesData.ts",
+      "summary": "Central game catalog defining all 6 games (Snake, 2048, Breakout, Flappy, Minesweeper, Simon) with metadata including categories, difficulty, descriptions, tags, and achievement definitions.",
+      "tags": ["data-model", "configuration", "game-catalog"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/main.tsx",
+      "type": "file",
+      "name": "main.tsx",
+      "filePath": "src/main.tsx",
+      "summary": "Application entry point that bootstraps React and renders the App component into the DOM root.",
+      "tags": ["entry-point", "bootstrap"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/types.ts",
+      "type": "file",
+      "name": "types.ts",
+      "filePath": "src/types.ts",
+      "summary": "TypeScript type definitions for game metadata, user statistics, achievements, and game categories used throughout the application.",
+      "tags": ["type-definition", "data-model"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/storage.ts",
+      "type": "file",
+      "name": "storage.ts",
+      "filePath": "src/utils/storage.ts",
+      "summary": "LocalStorage persistence layer for user statistics including play counts, high scores, favorites, and achievement tracking with serialization/deserialization.",
+      "tags": ["utility", "persistence", "localstorage"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/utils/storage.ts:loadUserStats",
+      "type": "function",
+      "name": "loadUserStats",
+      "filePath": "src/utils/storage.ts",
+      "lineRange": [37, 57],
+      "summary": "Loads and validates user statistics from localStorage with fallback to default empty state.",
+      "tags": ["utility", "persistence", "localstorage"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/utils/storage.ts:saveUserStats",
+      "type": "function",
+      "name": "saveUserStats",
+      "filePath": "src/utils/storage.ts",
+      "lineRange": [59, 66],
+      "summary": "Serializes and persists user statistics to localStorage with error handling.",
+      "tags": ["utility", "persistence", "localstorage"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/storage.ts:recordGamePlay",
+      "type": "function",
+      "name": "recordGamePlay",
+      "filePath": "src/utils/storage.ts",
+      "lineRange": [68, 88],
+      "summary": "Records a game play session updating play count, high score, and last played timestamp for a specific game.",
+      "tags": ["utility", "persistence", "statistics"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/utils/storage.ts:toggleFavorite",
+      "type": "function",
+      "name": "toggleFavorite",
+      "filePath": "src/utils/storage.ts",
+      "lineRange": [90, 101],
+      "summary": "Toggles a game's favorite status in user statistics.",
+      "tags": ["utility", "persistence", "favorites"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/GameViewer.tsx",
+      "type": "file",
+      "name": "GameViewer.tsx",
+      "filePath": "src/components/GameViewer.tsx",
+      "summary": "Game viewer component that renders the active game, handles game switching, fullscreen toggle, help overlay, and delegates rendering to individual game implementations.",
+      "tags": ["component", "game-viewer", "game-switcher", "fullscreen"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/GameViewer.tsx:GameViewer",
+      "type": "function",
+      "name": "GameViewer",
+      "filePath": "src/components/GameViewer.tsx",
+      "lineRange": [21, 282],
+      "summary": "Main game viewer component managing game state, fullscreen, help overlay, and dynamic game rendering based on selected game ID.",
+      "tags": ["component", "state-management", "game-switcher"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/games/BreakoutGame.tsx",
+      "type": "file",
+      "name": "BreakoutGame.tsx",
+      "filePath": "src/components/games/BreakoutGame.tsx",
+      "summary": "Breakout/Arkanoid style brick breaker game with paddle, ball physics, power-ups, particles, multiple levels, and laser shooting mechanics.",
+      "tags": ["game", "arcade", "canvas", "physics", "particle-effects"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/games/BreakoutGame.tsx:BreakoutGame",
+      "type": "function",
+      "name": "BreakoutGame",
+      "filePath": "src/components/games/BreakoutGame.tsx",
+      "lineRange": [60, 766],
+      "summary": "Complete Breakout game implementation with paddle control, ball physics, brick destruction, power-ups, particles, and level progression.",
+      "tags": ["game", "arcade", "canvas", "physics", "state-management"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/games/FlappyGame.tsx",
+      "type": "file",
+      "name": "FlappyGame.tsx",
+      "filePath": "src/components/games/FlappyGame.tsx",
+      "summary": "Flappy Bird clone with bird physics, pipe obstacles, particle effects, medal system, and score tracking.",
+      "tags": ["game", "arcade", "canvas", "physics", "endless-runner"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/games/FlappyGame.tsx:FlappyGame",
+      "type": "function",
+      "name": "FlappyGame",
+      "filePath": "src/components/games/FlappyGame.tsx",
+      "lineRange": [36, 479],
+      "summary": "Flappy Bird style game with tap-to-jump mechanics, procedural pipe generation, collision detection, and visual effects.",
+      "tags": ["game", "arcade", "canvas", "physics", "endless-runner"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/games/Game2048.tsx",
+      "type": "file",
+      "name": "Game2048.tsx",
+      "filePath": "src/components/games/Game2048.tsx",
+      "summary": "2048 puzzle game with tile merging mechanics, undo functionality, win detection, touch/swipe support, and animated tile rendering.",
+      "tags": ["game", "puzzle", "grid-based", "touch-support", "animations"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/games/Game2048.tsx:Game2048",
+      "type": "function",
+      "name": "Game2048",
+      "filePath": "src/components/games/Game2048.tsx",
+      "lineRange": [14, 476],
+      "summary": "2048 game logic with board state management, slide/merge mechanics, undo history, win condition, and animated rendering.",
+      "tags": ["game", "puzzle", "grid-based", "state-management", "animations"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/games/MinesweeperGame.tsx",
+      "type": "file",
+      "name": "MinesweeperGame.tsx",
+      "filePath": "src/components/games/MinesweeperGame.tsx",
+      "summary": "Minesweeper implementation with configurable difficulty, timer, flag mode, hint system, flood-fill reveal, and win/lose detection.",
+      "tags": ["game", "puzzle", "grid-based", "logic", "timer"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/games/MinesweeperGame.tsx:MinesweeperGame",
+      "type": "function",
+      "name": "MinesweeperGame",
+      "filePath": "src/components/games/MinesweeperGame.tsx",
+      "lineRange": [29, 436],
+      "summary": "Classic Minesweeper with difficulty levels, first-click safety, flag toggling, hint system, timer, and recursive neighbor reveal.",
+      "tags": ["game", "puzzle", "grid-based", "logic", "timer"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/games/SimonGame.tsx",
+      "type": "file",
+      "name": "SimonGame.tsx",
+      "filePath": "src/components/games/SimonGame.tsx",
+      "summary": "Simon Says memory game with sequence playback, player input validation, progressive difficulty, keyboard/mouse support, and audio tones.",
+      "tags": ["game", "memory", "sequence", "audio", "pattern-matching"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/games/SimonGame.tsx:SimonGame",
+      "type": "function",
+      "name": "SimonGame",
+      "filePath": "src/components/games/SimonGame.tsx",
+      "lineRange": [19, 272],
+      "summary": "Simon memory game with sequence generation, timed pad flashing, player input matching, round progression, and audio feedback.",
+      "tags": ["game", "memory", "sequence", "audio", "pattern-matching"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/games/SnakeGame.tsx",
+      "type": "file",
+      "name": "SnakeGame.tsx",
+      "filePath": "src/components/games/SnakeGame.tsx",
+      "summary": "Snake game with food collection, combo scoring, portal mode, speed levels, pause/resume, touch controls, and animated rendering with trail effects.",
+      "tags": ["game", "arcade", "canvas", "snake", "combo-scoring"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/games/SnakeGame.tsx:SnakeGame",
+      "type": "function",
+      "name": "SnakeGame",
+      "filePath": "src/components/games/SnakeGame.tsx",
+      "lineRange": [28, 589],
+      "summary": "Snake game with directional control, food spawning, combo multiplier scoring, portal walls, speed levels, and smooth canvas rendering.",
+      "tags": ["game", "arcade", "canvas", "snake", "state-management"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/utils/audio.ts",
+      "type": "file",
+      "name": "audio.ts",
+      "filePath": "src/utils/audio.ts",
+      "summary": "Web Audio API wrapper providing procedural sound effects for all games including click, eat, jump, pop, bounce, game over, win, and Simon tones.",
+      "tags": ["utility", "audio", "web-audio-api", "sound-effects", "procedural-audio"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/utils/audio.ts:getAudioContext",
+      "type": "function",
+      "name": "getAudioContext",
+      "filePath": "src/utils/audio.ts",
+      "lineRange": [5, 17],
+      "summary": "Singleton getter for Web AudioContext with automatic resume handling for browser autoplay policies.",
+      "tags": ["utility", "audio", "singleton", "browser-api"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/audio.ts:SoundEffects",
+      "type": "function",
+      "name": "SoundEffects",
+      "filePath": "src/utils/audio.ts",
+      "lineRange": [19, 205],
+      "summary": "Object containing all procedural sound effect generators using Web Audio API oscillators and gain nodes.",
+      "tags": ["utility", "audio", "sound-effects", "procedural-audio"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:.env.example",
+      "type": "config",
+      "name": ".env.example",
+      "filePath": ".env.example",
+      "summary": "Environment variable template defining GEMINI_API_KEY for Google Generative AI integration and APP_URL for the application base URL.",
+      "tags": ["configuration", "environment", "api-keys", "template"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "index.html",
+      "summary": "Main HTML entry point loading the Vite React application with viewport configuration and root div for app mounting.",
+      "tags": ["entry-point", "html", "bootstrap", "vite"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:metadata.json",
+      "type": "config",
+      "name": "metadata.json",
+      "filePath": "metadata.json",
+      "summary": "Application metadata including name, description, frame permissions, and major capabilities for the ArcadeSphere game collection.",
+      "tags": ["configuration", "metadata", "manifest", "capabilities"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "NPM package configuration defining project metadata, scripts, React 19 dependencies, Vite build tooling, Tailwind CSS, Express server, and game-related libraries.",
+      "tags": ["configuration", "package-management", "build-system", "dependencies", "scripts"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "tsconfig.json",
+      "summary": "TypeScript compiler configuration with strict mode, React JSX transform, path aliases, and module resolution for the Vite React project.",
+      "tags": ["configuration", "typescript", "build-system", "compiler-options"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.understand-anything/.understandignore",
+      "type": "file",
+      "name": ".understandignore",
+      "filePath": ".understand-anything/.understandignore",
+      "summary": "Understand Anything ignore file defining patterns to exclude from codebase analysis, based on .gitignore patterns and test file conventions.",
+      "tags": ["configuration", "analysis-ignore", "tooling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/index.css",
+      "type": "file",
+      "name": "index.css",
+      "filePath": "src/index.css",
+      "summary": "Global CSS entry point importing Tailwind CSS v4 styles for the application.",
+      "tags": ["stylesheet", "tailwindcss", "entry-point", "global-styles"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:vite.config.ts",
+      "type": "config",
+      "name": "vite.config.ts",
+      "filePath": "vite.config.ts",
+      "summary": "Vite configuration enabling React plugin, Tailwind CSS plugin, and development server settings for the ArcadeSphere game collection.",
+      "tags": ["configuration", "vite", "build-system", "react", "tailwindcss"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/components/GameCard.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/components/GameViewer.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/components/Header.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/components/StatsModal.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/data/gamesData.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/utils/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/GameCard.tsx",
+      "target": "file:src/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Header.tsx",
+      "target": "file:src/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/StatsModal.tsx",
+      "target": "file:src/data/gamesData.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/StatsModal.tsx",
+      "target": "file:src/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/data/gamesData.ts",
+      "target": "file:src/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/main.tsx",
+      "target": "file:src/App.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/main.tsx",
+      "target": "file:src/index.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "file:src/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "function:src/App.tsx:App",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/GameCard.tsx",
+      "target": "function:src/components/GameCard.tsx:GameCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/Header.tsx",
+      "target": "function:src/components/Header.tsx:Header",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/StatsModal.tsx",
+      "target": "function:src/components/StatsModal.tsx:StatsModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "function:src/utils/storage.ts:loadUserStats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "function:src/utils/storage.ts:saveUserStats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "function:src/utils/storage.ts:recordGamePlay",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "function:src/utils/storage.ts:toggleFavorite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "function:src/App.tsx:App",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/GameCard.tsx",
+      "target": "function:src/components/GameCard.tsx:GameCard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/Header.tsx",
+      "target": "function:src/components/Header.tsx:Header",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/StatsModal.tsx",
+      "target": "function:src/components/StatsModal.tsx:StatsModal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/data/gamesData.ts",
+      "target": "file:src/data/gamesData.ts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "function:src/utils/storage.ts:loadUserStats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "function:src/utils/storage.ts:saveUserStats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "function:src/utils/storage.ts:recordGamePlay",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "function:src/utils/storage.ts:toggleFavorite",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/utils/storage.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/data/gamesData.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/components/GameViewer.tsx",
+      "target": "file:src/components/games/BreakoutGame.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/GameViewer.tsx",
+      "target": "file:src/components/games/FlappyGame.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/GameViewer.tsx",
+      "target": "file:src/components/games/Game2048.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/GameViewer.tsx",
+      "target": "file:src/components/games/MinesweeperGame.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/GameViewer.tsx",
+      "target": "file:src/components/games/SimonGame.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/GameViewer.tsx",
+      "target": "file:src/components/games/SnakeGame.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/GameViewer.tsx",
+      "target": "file:src/data/gamesData.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/GameViewer.tsx",
+      "target": "file:src/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/games/BreakoutGame.tsx",
+      "target": "file:src/utils/audio.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/games/FlappyGame.tsx",
+      "target": "file:src/utils/audio.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/games/Game2048.tsx",
+      "target": "file:src/utils/audio.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/games/MinesweeperGame.tsx",
+      "target": "file:src/utils/audio.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/games/SimonGame.tsx",
+      "target": "file:src/utils/audio.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/games/SnakeGame.tsx",
+      "target": "file:src/utils/audio.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/GameViewer.tsx",
+      "target": "function:src/components/GameViewer.tsx:GameViewer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/games/BreakoutGame.tsx",
+      "target": "function:src/components/games/BreakoutGame.tsx:BreakoutGame",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/games/FlappyGame.tsx",
+      "target": "function:src/components/games/FlappyGame.tsx:FlappyGame",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/games/Game2048.tsx",
+      "target": "function:src/components/games/Game2048.tsx:Game2048",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/games/MinesweeperGame.tsx",
+      "target": "function:src/components/games/MinesweeperGame.tsx:MinesweeperGame",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/games/SimonGame.tsx",
+      "target": "function:src/components/games/SimonGame.tsx:SimonGame",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/games/SnakeGame.tsx",
+      "target": "function:src/components/games/SnakeGame.tsx:SnakeGame",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/utils/audio.ts",
+      "target": "function:src/utils/audio.ts:getAudioContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/utils/audio.ts",
+      "target": "function:src/utils/audio.ts:SoundEffects",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/GameViewer.tsx",
+      "target": "function:src/components/GameViewer.tsx:GameViewer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/games/BreakoutGame.tsx",
+      "target": "function:src/components/games/BreakoutGame.tsx:BreakoutGame",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/games/FlappyGame.tsx",
+      "target": "function:src/components/games/FlappyGame.tsx:FlappyGame",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/games/Game2048.tsx",
+      "target": "function:src/components/games/Game2048.tsx:Game2048",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/games/MinesweeperGame.tsx",
+      "target": "function:src/components/games/MinesweeperGame.tsx:MinesweeperGame",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/games/SimonGame.tsx",
+      "target": "function:src/components/games/SimonGame.tsx:SimonGame",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/games/SnakeGame.tsx",
+      "target": "function:src/components/games/SnakeGame.tsx:SnakeGame",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/audio.ts",
+      "target": "function:src/utils/audio.ts:SoundEffects",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/GameViewer.tsx",
+      "target": "file:src/data/gamesData.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/components/games/BreakoutGame.tsx",
+      "target": "file:src/utils/audio.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/games/FlappyGame.tsx",
+      "target": "file:src/utils/audio.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/games/Game2048.tsx",
+      "target": "file:src/utils/audio.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/games/MinesweeperGame.tsx",
+      "target": "file:src/utils/audio.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/games/SimonGame.tsx",
+      "target": "file:src/utils/audio.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/games/SnakeGame.tsx",
+      "target": "file:src/utils/audio.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:package.json",
+      "target": "file:src/main.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:tsconfig.json",
+      "target": "file:src/main.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:.env.example",
+      "target": "file:src/main.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:src/main.tsx",
+      "type": "deploys",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "config:vite.config.ts",
+      "target": "file:src/main.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/index.css",
+      "target": "file:src/main.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:ui",
+      "name": "UI Layer",
+      "description": "React components for game selection, display, and interaction including game cards, header, stats modal, game viewer, and all six game implementations (Breakout, Flappy, 2048, Minesweeper, Simon, Snake).",
+      "nodeIds": [
+        "file:src/components/GameCard.tsx",
+        "file:src/components/Header.tsx",
+        "file:src/components/StatsModal.tsx",
+        "file:src/components/GameViewer.tsx",
+        "file:src/components/games/BreakoutGame.tsx",
+        "file:src/components/games/FlappyGame.tsx",
+        "file:src/components/games/Game2048.tsx",
+        "file:src/components/games/MinesweeperGame.tsx",
+        "file:src/components/games/SimonGame.tsx",
+        "file:src/components/games/SnakeGame.tsx"
+      ]
+    },
+    {
+      "id": "layer:state",
+      "name": "State & Data Layer",
+      "description": "Core application state management (App.tsx), shared type definitions (types.ts), and central game catalog data (gamesData.ts) defining all game metadata, categories, and achievements.",
+      "nodeIds": [
+        "file:src/App.tsx",
+        "file:src/types.ts",
+        "file:src/data/gamesData.ts"
+      ]
+    },
+    {
+      "id": "layer:utility",
+      "name": "Utility Layer",
+      "description": "Cross-cutting utilities including localStorage persistence for user statistics (storage.ts) and Web Audio API wrapper for procedural sound effects (audio.ts).",
+      "nodeIds": [
+        "file:src/utils/storage.ts",
+        "file:src/utils/audio.ts"
+      ]
+    },
+    {
+      "id": "layer:entry",
+      "name": "Entry Point",
+      "description": "Application bootstrap (main.tsx), HTML entry point (index.html), and global stylesheet importing Tailwind CSS (index.css).",
+      "nodeIds": [
+        "file:src/main.tsx",
+        "file:index.html",
+        "file:src/index.css"
+      ]
+    },
+    {
+      "id": "layer:config",
+      "name": "Configuration",
+      "description": "Project build and runtime configuration including package.json with React 19 and Vite dependencies, TypeScript compiler settings, Vite config with React and Tailwind plugins, and environment variable template.",
+      "nodeIds": [
+        "config:package.json",
+        "config:tsconfig.json",
+        "config:vite.config.ts",
+        "config:.env.example"
+      ]
+    },
+    {
+      "id": "layer:metadata",
+      "name": "Metadata",
+      "description": "Application metadata manifest defining the ArcadeSphere game collection name, description, frame permissions, and major capabilities.",
+      "nodeIds": [
+        "config:metadata.json"
+      ]
+    },
+    {
+      "id": "layer:tooling",
+      "name": "Tooling",
+      "description": "Understand Anything analysis ignore file defining exclusion patterns for codebase analysis.",
+      "nodeIds": [
+        "file:.understand-anything/.understandignore"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Project Bootstrap",
+      "description": "The application starts at index.html which loads the Vite React app, and main.tsx bootstraps React by rendering the App component into the DOM root. The global stylesheet (index.css) imports Tailwind CSS v4 for styling.",
+      "nodeIds": ["file:index.html", "file:src/main.tsx", "file:src/index.css"]
+    },
+    {
+      "order": 2,
+      "title": "Application Root Component",
+      "description": "App.tsx is the main application component that manages all global state including the active game selection, user statistics, sound settings, favorites, search queries, and category filters. It coordinates the header, game catalog, game viewer, and stats modal.",
+      "nodeIds": ["file:src/App.tsx"],
+      "languageLesson": "React hooks (useState, useEffect, useMemo, useCallback) are used extensively for state management and performance optimization. The component uses a single state object pattern with multiple useState calls for different concerns."
+    },
+    {
+      "order": 3,
+      "title": "Core Types and Game Catalog",
+      "description": "The type system (types.ts) defines the domain model for games, user statistics, achievements, and categories. The gamesData.ts file contains the central catalog of all six games with their metadata, difficulty ratings, descriptions, tags, and achievement definitions.",
+      "nodeIds": ["file:src/types.ts", "file:src/data/gamesData.ts"],
+      "languageLesson": "TypeScript discriminated unions and branded types could be used to further strengthen the type safety of game IDs and category identifiers."
+    },
+    {
+      "order": 4,
+      "title": "Persistence Layer",
+      "description": "The storage.ts utility provides a localStorage persistence layer for user statistics including play counts, high scores, favorites, and achievement tracking. It handles serialization, deserialization, validation, and error recovery.",
+      "nodeIds": ["file:src/utils/storage.ts"]
+    },
+    {
+      "order": 5,
+      "title": "UI Components Overview",
+      "description": "The UI layer consists of reusable components: GameCard displays individual game metadata with difficulty badges and favorite toggles; Header shows total plays and provides navigation actions; StatsModal presents comprehensive statistics with achievement progress; GameViewer renders the active game and handles game switching.",
+      "nodeIds": ["file:src/components/GameCard.tsx", "file:src/components/Header.tsx", "file:src/components/StatsModal.tsx", "file:src/components/GameViewer.tsx"]
+    },
+    {
+      "order": 6,
+      "title": "Audio Utility",
+      "description": "The audio.ts module wraps the Web Audio API to generate procedural sound effects for all games including click, eat, jump, pop, bounce, game over, win, and Simon-specific tones. It uses a singleton AudioContext pattern with automatic resume handling for browser autoplay policies.",
+      "nodeIds": ["file:src/utils/audio.ts"],
+      "languageLesson": "Web Audio API uses an AudioContext with OscillatorNode and GainNode to synthesize sounds programmatically. The singleton pattern with context.resume() handles browser autoplay policies that require user interaction before audio can play."
+    },
+    {
+      "order": 7,
+      "title": "Game Implementations - Arcade Games",
+      "description": "BreakoutGame and FlappyGame are classic arcade-style games implemented with HTML5 Canvas. Breakout features paddle control, ball physics, power-ups, particles, and multi-level progression. Flappy Bird clone implements tap-to-jump mechanics, procedural pipe generation, collision detection, and a medal scoring system.",
+      "nodeIds": ["file:src/components/games/BreakoutGame.tsx", "file:src/components/games/FlappyGame.tsx"]
+    },
+    {
+      "order": 8,
+      "title": "Game Implementations - Puzzle & Strategy Games",
+      "description": "Game2048 implements the classic 2048 puzzle with tile merging, undo functionality, and animated rendering. MinesweeperGame provides configurable difficulty levels, timer, flag mode, hint system, and flood-fill reveal. SimonGame is a memory game with sequence playback, progressive difficulty, and audio tone generation.",
+      "nodeIds": ["file:src/components/games/Game2048.tsx", "file:src/components/games/MinesweeperGame.tsx", "file:src/components/games/SimonGame.tsx"]
+    },
+    {
+      "order": 9,
+      "title": "Game Implementation - Snake",
+      "description": "SnakeGame features directional control, food collection with combo scoring, portal mode (wrap-around walls), multiple speed levels, pause/resume functionality, touch controls, and smooth canvas rendering with trail effects.",
+      "nodeIds": ["file:src/components/games/SnakeGame.tsx"]
+    },
+    {
+      "order": 10,
+      "title": "Build Configuration",
+      "description": "The project uses Vite as the build tool with React plugin and Tailwind CSS v4 plugin. TypeScript is configured with strict mode, path aliases, and modern JSX transform. The environment template (.env.example) documents required API keys for Google Generative AI integration.",
+      "nodeIds": ["config:package.json", "config:vite.config.ts", "config:tsconfig.json", "config:.env.example"]
+    },
+    {
+      "order": 11,
+      "title": "Application Metadata",
+      "description": "The metadata.json manifest defines the ArcadeSphere game collection's name, description, frame permissions, and major capabilities including server-side Gemini API integration for potential AI features.",
+      "nodeIds": ["config:metadata.json"]
+    }
+  ]
+}

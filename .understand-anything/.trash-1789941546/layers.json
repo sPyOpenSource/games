@@ -1,0 +1,75 @@
+[
+  {
+    "id": "layer:ui",
+    "name": "UI Layer",
+    "description": "React components for game selection, display, and interaction including game cards, header, stats modal, game viewer, and all six game implementations (Breakout, Flappy, 2048, Minesweeper, Simon, Snake).",
+    "nodeIds": [
+      "file:src/components/GameCard.tsx",
+      "file:src/components/Header.tsx",
+      "file:src/components/StatsModal.tsx",
+      "file:src/components/GameViewer.tsx",
+      "file:src/components/games/BreakoutGame.tsx",
+      "file:src/components/games/FlappyGame.tsx",
+      "file:src/components/games/Game2048.tsx",
+      "file:src/components/games/MinesweeperGame.tsx",
+      "file:src/components/games/SimonGame.tsx",
+      "file:src/components/games/SnakeGame.tsx"
+    ]
+  },
+  {
+    "id": "layer:state",
+    "name": "State & Data Layer",
+    "description": "Core application state management (App.tsx), shared type definitions (types.ts), and central game catalog data (gamesData.ts) defining all game metadata, categories, and achievements.",
+    "nodeIds": [
+      "file:src/App.tsx",
+      "file:src/types.ts",
+      "file:src/data/gamesData.ts"
+    ]
+  },
+  {
+    "id": "layer:utility",
+    "name": "Utility Layer",
+    "description": "Cross-cutting utilities including localStorage persistence for user statistics (storage.ts) and Web Audio API wrapper for procedural sound effects (audio.ts).",
+    "nodeIds": [
+      "file:src/utils/storage.ts",
+      "file:src/utils/audio.ts"
+    ]
+  },
+  {
+    "id": "layer:entry",
+    "name": "Entry Point",
+    "description": "Application bootstrap (main.tsx), HTML entry point (index.html), and global stylesheet importing Tailwind CSS (index.css).",
+    "nodeIds": [
+      "file:src/main.tsx",
+      "file:index.html",
+      "file:src/index.css"
+    ]
+  },
+  {
+    "id": "layer:config",
+    "name": "Configuration",
+    "description": "Project build and runtime configuration including package.json with React 19 and Vite dependencies, TypeScript compiler settings, Vite config with React and Tailwind plugins, and environment variable template.",
+    "nodeIds": [
+      "config:package.json",
+      "config:tsconfig.json",
+      "config:vite.config.ts",
+      "config:.env.example"
+    ]
+  },
+  {
+    "id": "layer:metadata",
+    "name": "Metadata",
+    "description": "Application metadata manifest defining the ArcadeSphere game collection name, description, frame permissions, and major capabilities.",
+    "nodeIds": [
+      "config:metadata.json"
+    ]
+  },
+  {
+    "id": "layer:tooling",
+    "name": "Tooling",
+    "description": "Understand Anything analysis ignore file defining exclusion patterns for codebase analysis.",
+    "nodeIds": [
+      "file:.understand-anything/.understandignore"
+    ]
+  }
+]

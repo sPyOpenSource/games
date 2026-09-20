@@ -1,0 +1,29 @@
+{
+  "projectRoot": "/Users/xuyi/Source/JavaScript/games",
+  "files": [
+    {"path": ".env.example", "language": "config", "fileCategory": "config"},
+    {"path": ".understand-anything/.understandignore", "language": "unknown", "fileCategory": "code"},
+    {"path": "index.html", "language": "html", "fileCategory": "markup"},
+    {"path": "metadata.json", "language": "json", "fileCategory": "config"},
+    {"path": "package.json", "language": "json", "fileCategory": "config"},
+    {"path": "src/App.tsx", "language": "typescript", "fileCategory": "code"},
+    {"path": "src/components/GameCard.tsx", "language": "typescript", "fileCategory": "code"},
+    {"path": "src/components/games/BreakoutGame.tsx", "language": "typescript", "fileCategory": "code"},
+    {"path": "src/components/games/FlappyGame.tsx", "language": "typescript", "fileCategory": "code"},
+    {"path": "src/components/games/Game2048.tsx", "language": "typescript", "fileCategory": "code"},
+    {"path": "src/components/games/MinesweeperGame.tsx", "language": "typescript", "fileCategory": "code"},
+    {"path": "src/components/games/SimonGame.tsx", "language": "typescript", "fileCategory": "code"},
+    {"path": "src/components/games/SnakeGame.tsx", "language": "typescript", "fileCategory": "code"},
+    {"path": "src/components/GameViewer.tsx", "language": "typescript", "fileCategory": "code"},
+    {"path": "src/components/Header.tsx", "language": "typescript", "fileCategory": "code"},
+    {"path": "src/components/StatsModal.tsx", "language": "typescript", "fileCategory": "code"},
+    {"path": "src/data/gamesData.ts", "language": "typescript", "fileCategory": "code"},
+    {"path": "src/index.css", "language": "css", "fileCategory": "markup"},
+    {"path": "src/main.tsx", "language": "typescript", "fileCategory": "code"},
+    {"path": "src/types.ts", "language": "typescript", "fileCategory": "code"},
+    {"path": "src/utils/audio.ts", "language": "typescript", "fileCategory": "code"},
+    {"path": "src/utils/storage.ts", "language": "typescript", "fileCategory": "code"},
+    {"path": "tsconfig.json", "language": "json", "fileCategory": "config"},
+    {"path": "vite.config.ts", "language": "typescript", "fileCategory": "code"}
+  ]
+}

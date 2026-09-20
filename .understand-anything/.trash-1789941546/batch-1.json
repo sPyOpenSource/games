@@ -1,0 +1,396 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/App.tsx",
+      "type": "file",
+      "name": "App.tsx",
+      "filePath": "src/App.tsx",
+      "summary": "Main application component managing game selection, state, and rendering. Handles user interactions, favorites, statistics tracking, and coordinates the game viewer with the game catalog.",
+      "tags": ["entry-point", "component", "state-management", "game-catalog"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/App.tsx:App",
+      "type": "function",
+      "name": "App",
+      "filePath": "src/App.tsx",
+      "lineRange": [12, 411],
+      "summary": "Root React component that manages all application state including active game, user stats, sound settings, favorites, search, and category filters.",
+      "tags": ["component", "state-management", "hook-heavy"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/GameCard.tsx",
+      "type": "file",
+      "name": "GameCard.tsx",
+      "filePath": "src/components/GameCard.tsx",
+      "summary": "Reusable game card component displaying game metadata, difficulty, favorite status, and handling selection and favorite toggle interactions.",
+      "tags": ["component", "ui", "game-catalog"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/GameCard.tsx:GameCard",
+      "type": "function",
+      "name": "GameCard",
+      "filePath": "src/components/GameCard.tsx",
+      "lineRange": [12, 132],
+      "summary": "Renders a single game card with title, description, difficulty badge, tags, and favorite/play action buttons.",
+      "tags": ["component", "ui", "interaction"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/Header.tsx",
+      "type": "file",
+      "name": "Header.tsx",
+      "filePath": "src/components/Header.tsx",
+      "summary": "Header component showing total plays, sound toggle, stats modal trigger, random game button, and home navigation.",
+      "tags": ["component", "ui", "navigation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/Header.tsx:Header",
+      "type": "function",
+      "name": "Header",
+      "filePath": "src/components/Header.tsx",
+      "lineRange": [13, 93],
+      "summary": "Renders the top navigation bar with game statistics, sound control, and action buttons.",
+      "tags": ["component", "ui", "navigation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/StatsModal.tsx",
+      "type": "file",
+      "name": "StatsModal.tsx",
+      "filePath": "src/components/StatsModal.tsx",
+      "summary": "Modal dialog displaying comprehensive game statistics including total plays, high scores, achievements progress, and per-game breakdown with reset functionality.",
+      "tags": ["component", "ui", "modal", "statistics"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/StatsModal.tsx:StatsModal",
+      "type": "function",
+      "name": "StatsModal",
+      "filePath": "src/components/StatsModal.tsx",
+      "lineRange": [13, 221],
+      "summary": "Renders the statistics modal with aggregated stats, achievement tracking, and per-game play history.",
+      "tags": ["component", "ui", "modal", "statistics"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/data/gamesData.ts",
+      "type": "file",
+      "name": "gamesData.ts",
+      "filePath": "src/data/gamesData.ts",
+      "summary": "Central game catalog defining all 6 games (Snake, 2048, Breakout, Flappy, Minesweeper, Simon) with metadata including categories, difficulty, descriptions, tags, and achievement definitions.",
+      "tags": ["data-model", "configuration", "game-catalog"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/main.tsx",
+      "type": "file",
+      "name": "main.tsx",
+      "filePath": "src/main.tsx",
+      "summary": "Application entry point that bootstraps React and renders the App component into the DOM root.",
+      "tags": ["entry-point", "bootstrap"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/types.ts",
+      "type": "file",
+      "name": "types.ts",
+      "filePath": "src/types.ts",
+      "summary": "TypeScript type definitions for game metadata, user statistics, achievements, and game categories used throughout the application.",
+      "tags": ["type-definition", "data-model"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/storage.ts",
+      "type": "file",
+      "name": "storage.ts",
+      "filePath": "src/utils/storage.ts",
+      "summary": "LocalStorage persistence layer for user statistics including play counts, high scores, favorites, and achievement tracking with serialization/deserialization.",
+      "tags": ["utility", "persistence", "localstorage"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/utils/storage.ts:loadUserStats",
+      "type": "function",
+      "name": "loadUserStats",
+      "filePath": "src/utils/storage.ts",
+      "lineRange": [37, 57],
+      "summary": "Loads and validates user statistics from localStorage with fallback to default empty state.",
+      "tags": ["utility", "persistence", "localstorage"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/utils/storage.ts:saveUserStats",
+      "type": "function",
+      "name": "saveUserStats",
+      "filePath": "src/utils/storage.ts",
+      "lineRange": [59, 66],
+      "summary": "Serializes and persists user statistics to localStorage with error handling.",
+      "tags": ["utility", "persistence", "localstorage"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/storage.ts:recordGamePlay",
+      "type": "function",
+      "name": "recordGamePlay",
+      "filePath": "src/utils/storage.ts",
+      "lineRange": [68, 88],
+      "summary": "Records a game play session updating play count, high score, and last played timestamp for a specific game.",
+      "tags": ["utility", "persistence", "statistics"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/utils/storage.ts:toggleFavorite",
+      "type": "function",
+      "name": "toggleFavorite",
+      "filePath": "src/utils/storage.ts",
+      "lineRange": [90, 101],
+      "summary": "Toggles a game's favorite status in user statistics.",
+      "tags": ["utility", "persistence", "favorites"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/components/GameCard.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/components/GameViewer.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/components/Header.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/components/StatsModal.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/data/gamesData.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/utils/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/GameCard.tsx",
+      "target": "file:src/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Header.tsx",
+      "target": "file:src/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/StatsModal.tsx",
+      "target": "file:src/data/gamesData.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/StatsModal.tsx",
+      "target": "file:src/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/data/gamesData.ts",
+      "target": "file:src/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/main.tsx",
+      "target": "file:src/App.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/main.tsx",
+      "target": "file:src/index.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "file:src/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "function:src/App.tsx:App",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/GameCard.tsx",
+      "target": "function:src/components/GameCard.tsx:GameCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/Header.tsx",
+      "target": "function:src/components/Header.tsx:Header",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/StatsModal.tsx",
+      "target": "function:src/components/StatsModal.tsx:StatsModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "function:src/utils/storage.ts:loadUserStats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "function:src/utils/storage.ts:saveUserStats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "function:src/utils/storage.ts:recordGamePlay",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "function:src/utils/storage.ts:toggleFavorite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "function:src/App.tsx:App",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/GameCard.tsx",
+      "target": "function:src/components/GameCard.tsx:GameCard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/Header.tsx",
+      "target": "function:src/components/Header.tsx:Header",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/StatsModal.tsx",
+      "target": "function:src/components/StatsModal.tsx:StatsModal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/data/gamesData.ts",
+      "target": "file:src/data/gamesData.ts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "function:src/utils/storage.ts:loadUserStats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "function:src/utils/storage.ts:saveUserStats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "function:src/utils/storage.ts:recordGamePlay",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/storage.ts",
+      "target": "function:src/utils/storage.ts:toggleFavorite",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/utils/storage.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/data/gamesData.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}
