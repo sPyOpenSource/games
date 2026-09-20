@@ -1,0 +1,6 @@
+{
+  "name": "ArcadeSphere - Web Game Collection",
+  "description": "An arcade collection of retro and puzzle web games including Cyber Snake, 2048 Fusion, Brick Breaker DX, Flappy Aviator, Minesweeper Quest, and Simon Blitz with local high scores and sound effects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
