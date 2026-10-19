@@ -50,6 +50,30 @@ export const GAMES_DATA: GameInfo[] = [
     iconName: 'Grid',
   },
   {
+    id: 'minecraft',
+    title: 'Minecraft',
+    subtitle: 'Deductive grid tactical clearance',
+    category: 'puzzle',
+    description: 'Survey the planetary terrain and flag hidden explosive charges using pure deductive logic.',
+    imageUrl: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80',
+    instructions: [
+      'Click a tile to reveal it. Numbers reveal how many mines border that cell.',
+      'Guaranteed safe opening click on every new board.',
+      'Right-click or switch to "Flag Mode" to plant protective warning flags.',
+      'Auto-expands blank zones for swift tactical navigation.'
+    ],
+    controls: [
+      { key: 'Left Click / Tap', action: 'Reveal tile' },
+      { key: 'Right Click / Long Press', action: 'Toggle flag' },
+      { key: 'F Key / Flag Button', action: 'Toggle mobile flag tool' },
+    ],
+    tags: ['Logic', 'Tactical', 'Classic', 'Strategy'],
+    difficulty: 'Casual',
+    accentColor: 'rose',
+    glowColor: 'rgba(244, 63, 94, 0.4)',
+    iconName: 'ShieldAlert',
+  },
+  {
     id: 'breakout',
     title: 'Brick Breaker DX',
     subtitle: 'Kinetic arkanoid with falling power-ups',
