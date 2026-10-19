@@ -1,4 +1,5 @@
 export type GameId =
+  | 'drone'
   | 'snake'
   | '2048'
   | 'breakout'

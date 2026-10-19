@@ -114,6 +114,8 @@ export const GameViewer: React.FC<GameViewerProps> = ({
         return renderEmbeddedGame('https://neon-dreamscape-vr.lovable.app', 'Bear Adventure');
       case 'checkers':
         return renderEmbeddedGame('https://snap-exact-engine.lovable.app', 'Checkers');
+      case 'drone':
+        return renderEmbeddedGame('https://xuyi.h4ck.me/apps/drone', 'Drone Racing');
       default:
         return null;
     }

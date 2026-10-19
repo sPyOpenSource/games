@@ -231,6 +231,27 @@ export const GAMES_DATA: GameInfo[] = [
     iconName: 'Rocket',
   },
   {
+    id: 'drone',
+    title: 'Drone',
+    subtitle: 'Drone Simulator with obstacle courses',
+    category: 'action',
+    description: 'Connect an unbroken line of five stones horizontally, vertically, or diagonally to triumph.',
+    imageUrl: 'https://images.unsplash.com/photo-1609743522653-52354461eb27?auto=format&fit=crop&w=800&q=80',
+    instructions: [
+      'Take turns dropping black and white stones onto board intersections.',
+      'Form five stones in a row horizontally, vertically, or diagonally.',
+      'Block your rival when they reach 3 or 4 in a line!'
+    ],
+    controls: [
+      { key: 'Click Intersection', action: 'Place stone' },
+    ],
+    tags: ['Tactics'],
+    difficulty: 'Casual',
+    accentColor: 'cyan',
+    glowColor: 'rgba(6, 182, 212, 0.4)',
+    iconName: 'Grid',
+  },
+  {
     id: 'five',
     title: '五子棋',
     subtitle: 'Five-in-a-row Gomoku duel',
