@@ -1,4 +1,5 @@
 export type GameId =
+  | 'minecraft'
   | 'drone'
   | 'snake'
   | '2048'
