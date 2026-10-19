@@ -236,7 +236,7 @@ export const GAMES_DATA: GameInfo[] = [
     subtitle: 'Drone Simulator with obstacle courses',
     category: 'action',
     description: 'Pilot a high-speed FPV racing quadcopter through tricky obstacle courses and glowing race gates.',
-    imageUrl: '/src/assets/images/drone_racing_1792400966108.jpg',
+    imageUrl: '/assets/images/drone_racing_1792400966108.jpg',
     instructions: [
       'Take off and throttle through the futuristic 3D obstacle courses.',
       'Fly through glowing checkpoint gates to keep your race pace high.',
