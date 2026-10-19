@@ -56,6 +56,7 @@ export default function App() {
   const handleResetStats = () => {
     const clean: UserStats = {
       plays: {
+        drone: 0,
         snake: 0,
         '2048': 0,
         breakout: 0,
@@ -69,6 +70,7 @@ export default function App() {
         five: 0,
       },
       highScores: {
+        drone: 0,
         snake: 0,
         '2048': 0,
         breakout: 0,
@@ -233,55 +235,6 @@ export default function App() {
                   <Dices className="w-4 h-4 text-violet-400" />
                   <span>Random Game</span>
                 </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Quick Metrics & Stats Ribbon */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
-          <div className="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80 flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
-              <Sparkles className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="text-xs text-slate-400 font-medium">Arcade Games</div>
-              <div className="text-xl font-bold text-white font-mono">{GAMES_DATA.length} Ready</div>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80 flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400">
-              <Flame className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="text-xs text-slate-400 font-medium">Total Matches</div>
-              <div className="text-xl font-bold text-white font-mono">
-                {Object.values(stats.plays).reduce((a, b) => a + b, 0)}
-              </div>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80 flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
-              <Award className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="text-xs text-slate-400 font-medium">Top High Score</div>
-              <div className="text-xl font-bold text-amber-400 font-mono">
-                {Math.max(...Object.values(stats.highScores), 0)}
-              </div>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80 flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400">
-              <Heart className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="text-xs text-slate-400 font-medium">Favorited</div>
-              <div className="text-xl font-bold text-rose-400 font-mono">
-                {stats.favorites.length} Games
               </div>
             </div>
           </div>

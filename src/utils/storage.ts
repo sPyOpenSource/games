@@ -4,6 +4,7 @@ const STORAGE_KEY = 'arcadesphere_stats_v1';
 
 const DEFAULT_STATS: UserStats = {
   plays: {
+    drone: 0,
     snake: 0,
     '2048': 0,
     breakout: 0,
@@ -17,6 +18,7 @@ const DEFAULT_STATS: UserStats = {
     five: 0,
   },
   highScores: {
+    drone: 0,
     snake: 0,
     '2048': 0,
     breakout: 0,

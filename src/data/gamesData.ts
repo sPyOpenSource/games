@@ -235,21 +235,22 @@ export const GAMES_DATA: GameInfo[] = [
     title: 'Drone',
     subtitle: 'Drone Simulator with obstacle courses',
     category: 'action',
-    description: 'Connect an unbroken line of five stones horizontally, vertically, or diagonally to triumph.',
-    imageUrl: 'https://images.unsplash.com/photo-1609743522653-52354461eb27?auto=format&fit=crop&w=800&q=80',
+    description: 'Pilot a high-speed FPV racing quadcopter through tricky obstacle courses and glowing race gates.',
+    imageUrl: '/src/assets/images/drone_racing_1792400966108.jpg',
     instructions: [
-      'Take turns dropping black and white stones onto board intersections.',
-      'Form five stones in a row horizontally, vertically, or diagonally.',
-      'Block your rival when they reach 3 or 4 in a line!'
+      'Take off and throttle through the futuristic 3D obstacle courses.',
+      'Fly through glowing checkpoint gates to keep your race pace high.',
+      'Maintain altitude, avoid collision hazards, and reach the finish line!'
     ],
     controls: [
-      { key: 'Click Intersection', action: 'Place stone' },
+      { key: 'W / S / Up / Down', action: 'Pitch & Throttle' },
+      { key: 'A / D / Left / Right', action: 'Roll & Yaw' },
     ],
-    tags: ['Tactics'],
-    difficulty: 'Casual',
+    tags: ['Drone', 'Racing', 'Simulator', '3D', 'Flight'],
+    difficulty: 'Medium',
     accentColor: 'cyan',
     glowColor: 'rgba(6, 182, 212, 0.4)',
-    iconName: 'Grid',
+    iconName: 'Rocket',
   },
   {
     id: 'five',
