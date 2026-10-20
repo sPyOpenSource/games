@@ -4,6 +4,7 @@ const STORAGE_KEY = 'arcadesphere_stats_v1';
 
 const DEFAULT_STATS: UserStats = {
   plays: {
+    minecraft: 0,
     drone: 0,
     snake: 0,
     '2048': 0,
@@ -18,6 +19,7 @@ const DEFAULT_STATS: UserStats = {
     five: 0,
   },
   highScores: {
+    minecraft: 0,
     drone: 0,
     snake: 0,
     '2048': 0,

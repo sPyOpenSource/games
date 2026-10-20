@@ -56,6 +56,7 @@ export default function App() {
   const handleResetStats = () => {
     const clean: UserStats = {
       plays: {
+        minecraft: 0,
         drone: 0,
         snake: 0,
         '2048': 0,
@@ -70,6 +71,7 @@ export default function App() {
         five: 0,
       },
       highScores: {
+        minecraft: 0,
         drone: 0,
         snake: 0,
         '2048': 0,
