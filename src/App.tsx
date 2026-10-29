@@ -56,6 +56,8 @@ export default function App() {
   const handleResetStats = () => {
     const clean: UserStats = {
       plays: {
+        tetris: 0,
+        tetris3d: 0,
         minecraft: 0,
         drone: 0,
         snake: 0,
@@ -71,6 +73,8 @@ export default function App() {
         five: 0,
       },
       highScores: {
+        tetris: 0,
+        tetris3d: 0,
         minecraft: 0,
         drone: 0,
         snake: 0,
