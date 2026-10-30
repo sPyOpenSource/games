@@ -26,6 +26,30 @@ export const GAMES_DATA: GameInfo[] = [
     iconName: 'Zap',
   },
   {
+    id: 'rpg',
+    title: 'RPG',
+    subtitle: 'Neon arcade crawler with power-ups',
+    category: 'arcade',
+    description: 'Slither across a neon cyberspace grid, snatch energy orbs, and avoid crashing into your tail.',
+    imageUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80',
+    instructions: [
+      'Eat standard green cyber orbs to grow and earn 10 points.',
+      'Catch golden orbs (+30 pts) and speed crystals before they expire.',
+      'Quick successive food pickups build your combo score multiplier.',
+      'Toggle portal mode to wrap around edges or play classic hard-wall rules.'
+    ],
+    controls: [
+      { key: 'Arrow Keys / WASD', action: 'Direct snake heading' },
+      { key: 'Spacebar', action: 'Pause / Resume' },
+      { key: 'On-screen D-Pad', action: 'Touch / Mobile controls' },
+    ],
+    tags: ['Retro', 'Reflex', 'Grid', 'Classic'],
+    difficulty: 'Medium',
+    accentColor: 'emerald',
+    glowColor: 'rgba(16, 185, 129, 0.4)',
+    iconName: 'Zap',
+  },
+  {
     id: '2048',
     title: '2048 Fusion',
     subtitle: 'Harmonic sliding number puzzle',
