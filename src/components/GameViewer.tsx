@@ -115,7 +115,7 @@ export const GameViewer: React.FC<GameViewerProps> = ({
       case 'checkers':
         return renderEmbeddedGame('https://snap-exact-engine.lovable.app', 'Checkers');
       case 'drone':
-        return renderEmbeddedGame('https://xuyi.ftp.sh/apps/drone', 'Drone Racing');
+        return renderEmbeddedGame('https://xuyi.ftp.sh/apps/Drone', 'Drone Racing');
       case 'minecraft':
         return renderEmbeddedGame('https://bluej-builder.lovable.app', 'Minecraft');
       case 'tetris':
