@@ -10,6 +10,7 @@ export type GameId =
   | 'flappy'
   | 'minesweeper'
   | 'simon'
+  | 'simcity'
   | 'ra'
   | 'checkers'
   | 'go'

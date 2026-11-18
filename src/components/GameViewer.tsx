@@ -124,6 +124,8 @@ export const GameViewer: React.FC<GameViewerProps> = ({
         return renderEmbeddedGame('https://xuyi.ftp.sh/marco/tetris3d.html', 'Tetris3D');
       case 'rpg':
         return renderEmbeddedGame('https://xuyi.ftp.sh/apps/RPG', 'RPG');
+      case 'simcity':
+        return renderEmbeddedGame('https://xuyi.ftp.sh/apps/SimCity', 'SimCity');
       default:
         return null;
     }
