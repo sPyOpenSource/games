@@ -4,6 +4,8 @@ const STORAGE_KEY = 'arcadesphere_stats_v1';
 
 const DEFAULT_STATS: UserStats = {
   plays: {
+    rpg: 0,
+    simcity: 0,
     tetris: 0,
     tetris3d: 0,
     minecraft: 0,
@@ -21,6 +23,8 @@ const DEFAULT_STATS: UserStats = {
     five: 0,
   },
   highScores: {
+    rpg: 0,
+    simcity: 0,
     tetris: 0,
     tetris3d: 0,
     minecraft: 0,
