@@ -78,7 +78,11 @@ export const FlappyGame: React.FC<FlappyGameProps> = ({ soundEnabled, onGameOver
   }, []);
 
   const jump = useCallback(() => {
-    if (isGameOver) return;
+    if (isGameOver) {
+      // Restart a new flight from the game-over screen
+      setIsGameOver(false);
+      particlesRef.current = [];
+    }
     if (!isPlaying) {
       // Start game
       setIsPlaying(true);
